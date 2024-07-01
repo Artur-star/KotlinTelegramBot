@@ -1,5 +1,3 @@
-package lesson_2
-
 import java.io.File
 
 data class Word(
