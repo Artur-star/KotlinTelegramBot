@@ -15,9 +15,12 @@ fun main() {
     )
     println("Выберите пункт меню: ")
     var input = readln().toIntOrNull()
-    while (input in 0..2) {
+    while (true) {
         when (input) {
-            0 -> println("Нажали 0")
+            0 -> {
+                println("Нажали 0")
+                break
+            }
 
             1 -> println("Нажали 1")
 
@@ -27,6 +30,7 @@ fun main() {
         }
         input = readln().toIntOrNull()
     }
+
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
     file.writeText("hello|привет|1\ndog|собака|2\ncat|кошка|3\n")
