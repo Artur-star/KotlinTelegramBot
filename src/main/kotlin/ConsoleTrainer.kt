@@ -7,6 +7,30 @@ data class Word(
 )
 
 fun main() {
+    println(
+        "Меню: \n" +
+                "1 – Учить слова\n" +
+                "2 – Статистика\n" +
+                "0 – Выход"
+    )
+    println("Выберите пункт меню: ")
+    var input = readln().toIntOrNull()
+    while (true) {
+        when (input) {
+            0 -> {
+                println("Нажали 0")
+                break
+            }
+
+            1 -> println("Нажали 1")
+
+            2 -> println("Нажали 2")
+
+            else -> println("Ошибка ввода данных")
+        }
+        input = readln().toIntOrNull()
+    }
+
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
     file.writeText("hello|привет|1\ndog|собака|2\ncat|кошка|3\n")
