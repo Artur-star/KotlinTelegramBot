@@ -6,6 +6,8 @@ data class Word(
     val correctAnswersCount: Int = 0
 )
 
+const val MAX_ANSWER_COUNT = 3
+
 fun main() {
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
@@ -42,8 +44,8 @@ fun main() {
             1 -> println("Нажали 1")
 
             2 -> {
-                val filterDictionary = dictionary.filter { it.correctAnswersCount >= 3 }
-                println("Выучено ${filterDictionary.size} из ${dictionary.size} слов | ${(filterDictionary.size*100)/dictionary.size}")
+                val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_ANSWER_COUNT }
+                println("Выучено ${filterDictionary.size} из ${dictionary.size} слов | ${(filterDictionary.size * 100) / dictionary.size}")
             }
 
             else -> println("Ошибка ввода данных")
