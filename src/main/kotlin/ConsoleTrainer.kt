@@ -3,7 +3,7 @@ import java.io.File
 data class Word(
     val original: String,
     val translate: String,
-    val correctAnswersCount: Int = 0
+    var correctAnswersCount: Int = 0
 )
 
 const val MAX_ANSWER_COUNT = 3
@@ -11,7 +11,7 @@ const val MAX_ANSWER_COUNT = 3
 fun main() {
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
-    file.writeText("hello|привет|1\ndog|собака|2\ncat|кошка|3\n")
+    file.writeText("hello|привет\ndog|собака\ncat|кошка\npen|ручка\n")
 
     file.forEachLine { line ->
         val parts = line.split("|")
@@ -34,14 +34,42 @@ fun main() {
     )
     println("Выберите пункт меню: ")
     var input = readln().toIntOrNull()
+
     while (true) {
+        var enterCorrectAnswer = ""
         when (input) {
             0 -> {
                 println("Нажали 0")
                 break
             }
 
-            1 -> println("Нажали 1")
+            1 -> {
+                println("Нажали 1")
+                while (enterCorrectAnswer != "0") {
+                    val listUnlearnedWords: MutableList<Word> =
+                        dictionary.filter { it.correctAnswersCount < MAX_ANSWER_COUNT }.toMutableList()
+
+                    if (listUnlearnedWords.isEmpty()) {
+                        println("Вы выучили все слова")
+                        break
+                    } else {
+                        val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(4)
+                        val word = jumbledUnlearnedWords[0]
+                        val translate = word.translate
+                        val original = word.original
+                        println(original)
+                        jumbledUnlearnedWords.forEach { println(it.translate) }
+                        enterCorrectAnswer = readln()
+                        if (enterCorrectAnswer == translate) {
+                            listUnlearnedWords.set(
+                                listUnlearnedWords.indexOf(word),
+                                Word(word.original, word.translate, word.correctAnswersCount++)
+                            )
+                            println("Right answer")
+                        }
+                    }
+                }
+            }
 
             2 -> {
                 val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_ANSWER_COUNT }
@@ -50,6 +78,12 @@ fun main() {
 
             else -> println("Ошибка ввода данных")
         }
+        println(
+            "Меню: \n" +
+                    "1 – Учить слова\n" +
+                    "2 – Статистика\n" +
+                    "0 – Выход"
+        )
         input = readln().toIntOrNull()
     }
 }
