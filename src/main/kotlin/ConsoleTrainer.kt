@@ -51,12 +51,10 @@ fun main() {
                     if (listUnlearnedWords.isNotEmpty()) {
                         val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
                         val word = jumbledUnlearnedWords[0]
-                        val translate = word.translate
-                        val original = word.original
-                        println(original)
+                        println(word.original)
                         jumbledUnlearnedWords.forEach { println(it.translate) }
                         val enterCorrectAnswer = readln()
-                        if (enterCorrectAnswer == translate) {
+                        if (enterCorrectAnswer == word.translate) {
                             listUnlearnedWords.set(
                                 listUnlearnedWords.indexOf(word),
                                 Word(word.original, word.translate, word.correctAnswersCount++)
