@@ -6,12 +6,12 @@ data class Word(
     var correctAnswersCount: Int = 0
 )
 
-const val MAX_ANSWER_COUNT = 3
+const val MAX_NUMBER_CORRECT_ANSWERS = 3
+const val COUNT_ANSWERS = 4
 
 fun main() {
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
-    file.writeText("hello|привет\ndog|собака\ncat|кошка\npen|ручка\n")
 
     file.forEachLine { line ->
         val parts = line.split("|")
@@ -36,7 +36,6 @@ fun main() {
     var input = readln().toIntOrNull()
 
     while (true) {
-        var enterCorrectAnswer = ""
         when (input) {
             0 -> {
                 println("Нажали 0")
@@ -45,34 +44,32 @@ fun main() {
 
             1 -> {
                 println("Нажали 1")
-                while (enterCorrectAnswer != "0") {
+                while (true) {
                     val listUnlearnedWords: MutableList<Word> =
-                        dictionary.filter { it.correctAnswersCount < MAX_ANSWER_COUNT }.toMutableList()
+                        dictionary.filter { it.correctAnswersCount < MAX_NUMBER_CORRECT_ANSWERS }.toMutableList()
 
-                    if (listUnlearnedWords.isEmpty()) {
-                        println("Вы выучили все слова")
-                        break
-                    } else {
-                        val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(4)
+                    if (listUnlearnedWords.isNotEmpty()) {
+                        val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
                         val word = jumbledUnlearnedWords[0]
                         val translate = word.translate
                         val original = word.original
                         println(original)
                         jumbledUnlearnedWords.forEach { println(it.translate) }
-                        enterCorrectAnswer = readln()
+                        val enterCorrectAnswer = readln()
                         if (enterCorrectAnswer == translate) {
                             listUnlearnedWords.set(
                                 listUnlearnedWords.indexOf(word),
                                 Word(word.original, word.translate, word.correctAnswersCount++)
                             )
                             println("Right answer")
-                        }
-                    }
+                        } else if (enterCorrectAnswer == "0") break
+                    } else break
                 }
+                println("Вы выучили все слова")
             }
 
             2 -> {
-                val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_ANSWER_COUNT }
+                val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_NUMBER_CORRECT_ANSWERS }
                 println("Выучено ${filterDictionary.size} из ${dictionary.size} слов | ${(filterDictionary.size * 100) / dictionary.size}")
             }
 
