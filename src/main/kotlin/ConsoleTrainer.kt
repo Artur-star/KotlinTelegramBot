@@ -48,20 +48,17 @@ fun main() {
                     val listUnlearnedWords: MutableList<Word> =
                         dictionary.filter { it.correctAnswersCount < MAX_NUMBER_CORRECT_ANSWERS }.toMutableList()
 
-                    if (listUnlearnedWords.isNotEmpty()) {
-                        val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
-                        val word = jumbledUnlearnedWords[0]
-                        println(word.original)
-                        jumbledUnlearnedWords.forEach { println(it.translate) }
-                        val enterCorrectAnswer = readln()
-                        if (enterCorrectAnswer == word.translate) {
-                            listUnlearnedWords.set(
-                                listUnlearnedWords.indexOf(word),
-                                Word(word.original, word.translate, word.correctAnswersCount++)
-                            )
-                            println("Right answer")
-                        } else if (enterCorrectAnswer == "0") break
-                    } else break
+                    if (listUnlearnedWords.isEmpty()) break
+
+                    val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
+                    val word = jumbledUnlearnedWords.random()
+                    println(word.original)
+                    jumbledUnlearnedWords.forEach { println(it.translate) }
+                    val enterCorrectAnswer = readln()
+                    if (enterCorrectAnswer == word.translate) {
+                        word.correctAnswersCount++
+                        println("Right answer")
+                    } else if (enterCorrectAnswer == "0") break
                 }
                 println("Вы выучили все слова")
             }
