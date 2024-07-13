@@ -53,12 +53,14 @@ fun main() {
                     val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
                     val word = jumbledUnlearnedWords.random()
                     println(word.original)
-                    jumbledUnlearnedWords.forEach { println(it.translate) }
-                    val enterCorrectAnswer = readln()
-                    if (enterCorrectAnswer == word.translate) {
+                    jumbledUnlearnedWords.forEach { println("${jumbledUnlearnedWords.indexOf(it) + 1} - ${it.translate}") }
+                    println("0 - Выход")
+                    val enterCorrectAnswer = readln().toInt()
+                    if (enterCorrectAnswer == jumbledUnlearnedWords.indexOf(word) + 1) {
                         word.correctAnswersCount++
+                        saveDictionary(file, dictionary)
                         println("Right answer")
-                    } else if (enterCorrectAnswer == "0") break
+                    } else if (enterCorrectAnswer == 0) break
                 }
                 println("Вы выучили все слова")
             }
@@ -78,4 +80,12 @@ fun main() {
         )
         input = readln().toIntOrNull()
     }
+}
+
+fun saveDictionary(dictionary: File, listWords: List<Word>) {
+    val lineDictionary: StringBuilder = StringBuilder()
+    for (words in listWords) {
+        lineDictionary.append("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
+    }
+    dictionary.writeText(lineDictionary.trim().toString())
 }
