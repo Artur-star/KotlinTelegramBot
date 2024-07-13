@@ -3,15 +3,15 @@ import java.io.File
 data class Word(
     val original: String,
     val translate: String,
-    val correctAnswersCount: Int = 0
+    var correctAnswersCount: Int = 0
 )
 
-const val MAX_ANSWER_COUNT = 3
+const val MAX_NUMBER_CORRECT_ANSWERS = 3
+const val COUNT_ANSWERS = 4
 
 fun main() {
     val dictionary: MutableList<Word> = mutableListOf()
     val file = File("dictionary.txt")
-    file.writeText("hello|привет|1\ndog|собака|2\ncat|кошка|3\n")
 
     file.forEachLine { line ->
         val parts = line.split("|")
@@ -34,6 +34,7 @@ fun main() {
     )
     println("Выберите пункт меню: ")
     var input = readln().toIntOrNull()
+
     while (true) {
         when (input) {
             0 -> {
@@ -41,15 +42,40 @@ fun main() {
                 break
             }
 
-            1 -> println("Нажали 1")
+            1 -> {
+                println("Нажали 1")
+                while (true) {
+                    val listUnlearnedWords: MutableList<Word> =
+                        dictionary.filter { it.correctAnswersCount < MAX_NUMBER_CORRECT_ANSWERS }.toMutableList()
+
+                    if (listUnlearnedWords.isEmpty()) break
+
+                    val jumbledUnlearnedWords = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
+                    val word = jumbledUnlearnedWords.random()
+                    println(word.original)
+                    jumbledUnlearnedWords.forEach { println(it.translate) }
+                    val enterCorrectAnswer = readln()
+                    if (enterCorrectAnswer == word.translate) {
+                        word.correctAnswersCount++
+                        println("Right answer")
+                    } else if (enterCorrectAnswer == "0") break
+                }
+                println("Вы выучили все слова")
+            }
 
             2 -> {
-                val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_ANSWER_COUNT }
+                val filterDictionary = dictionary.filter { it.correctAnswersCount >= MAX_NUMBER_CORRECT_ANSWERS }
                 println("Выучено ${filterDictionary.size} из ${dictionary.size} слов | ${(filterDictionary.size * 100) / dictionary.size}")
             }
 
             else -> println("Ошибка ввода данных")
         }
+        println(
+            "Меню: \n" +
+                    "1 – Учить слова\n" +
+                    "2 – Статистика\n" +
+                    "0 – Выход"
+        )
         input = readln().toIntOrNull()
     }
 }
