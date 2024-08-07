@@ -83,9 +83,8 @@ fun main() {
 }
 
 fun saveDictionary(dictionary: File, listWords: List<Word>) {
-    val lineDictionary: StringBuilder = StringBuilder()
+    dictionary.writeText("")
     for (words in listWords) {
-        lineDictionary.append("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
+        dictionary.appendText("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
     }
-    dictionary.writeText(lineDictionary.trim().toString())
 }
