@@ -8,7 +8,7 @@ fun Question.asConsoleString(): String {
     val variants: String = this.variants
         .mapIndexed { index: Int, word: Word -> "${index + 1} - ${word.translate}" }
         .joinToString(separator = "\n")
-    return this.correctAnswer.original + "\n" + variants + "\n 0 - Выход"
+    return "${this.correctAnswer.original}\n$variants\n0 - Выход"
 }
 
 fun main() {
@@ -33,13 +33,9 @@ fun main() {
 
             1 -> {
                 while (true) {
-                    val question = trainer.getNextQuestion()
+                    val question = trainer.getNextQuestion() ?: break
+                    println(question.asConsoleString())
 
-                    if (question == null) {
-                        break
-                    } else {
-                        println(question.asConsoleString())
-                    }
                     val userAnswerInput = readln().toIntOrNull()
                     if (userAnswerInput == 0) break
 
