@@ -1,8 +1,5 @@
 import java.io.File
 
-const val MAX_NUMBER_CORRECT_ANSWERS = 3
-const val COUNT_ANSWERS = 4
-
 data class Statistics(
     val learned: Int,
     val total: Int,
@@ -14,25 +11,33 @@ data class Question(
     val correctAnswer: Word,
 )
 
-class LearnWordsTrainer {
+class LearnWordsTrainer(private val learnAnswerQuestion: Int = 3, private val countOfQuestionWords: Int = 4) {
 
     private var question: Question? = null
     private val dictionary = loadDictionary()
 
     fun getStatistics(): Statistics {
-        val learned = dictionary.filter { it.correctAnswersCount >= MAX_NUMBER_CORRECT_ANSWERS }.size
+        val learned = dictionary.filter { it.correctAnswersCount >= learnAnswerQuestion }.size
         val total = dictionary.size
         val percent = (learned * 100) / total
         return Statistics(learned, total, percent)
     }
 
     fun getNextQuestion(): Question? {
-        val listUnlearnedWords: List<Word> = dictionary.filter { it.correctAnswersCount < MAX_NUMBER_CORRECT_ANSWERS }
+        val listUnlearnedWords: List<Word> = dictionary.filter { it.correctAnswersCount < learnAnswerQuestion }
         if (listUnlearnedWords.isEmpty()) return null
-        val jumbledUnlearnedWords: List<Word> = listUnlearnedWords.shuffled().take(COUNT_ANSWERS)
-        val correctAnswer: Word = jumbledUnlearnedWords.random()
+
+        val questionWords: List<Word> = if (listUnlearnedWords.size < countOfQuestionWords) {
+            val listLearnedWords: List<Word> = dictionary.filter { it.correctAnswersCount >= learnAnswerQuestion }
+            listUnlearnedWords.shuffled().take(countOfQuestionWords) +
+                    listLearnedWords.shuffled().take(countOfQuestionWords - listUnlearnedWords.size)
+        } else {
+            listUnlearnedWords.shuffled().take(countOfQuestionWords)
+        }.shuffled()
+
+        val correctAnswer: Word = questionWords.random()
         question = Question(
-            variants = jumbledUnlearnedWords,
+            variants = questionWords,
             correctAnswer = correctAnswer,
         )
         return question
