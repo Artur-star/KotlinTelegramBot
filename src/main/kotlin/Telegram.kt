@@ -11,11 +11,8 @@ fun main(args: Array<String>) {
         Thread.sleep(2000)
         val updates = getUpdates(botToken, updateId)
         println(updates)
-        val startUpdateId = updates.lastIndexOf("update_id")
-        val endUpdateId = updates.lastIndexOf(",\n\"message\"")
-        if (startUpdateId == -1 || endUpdateId == -1) continue
-        println(updates.substring(startUpdateId, endUpdateId))
-        val updateIdString = updates.substring(startUpdateId + 11, endUpdateId)
+        val regex = "\"update_id\":(.+?),\n\"message\"".toRegex()
+        val updateIdString = regex.find(updates)?.groups?.get(1)?.value ?: continue
         updateId = updateIdString.toInt() + 1
     }
 }
