@@ -30,8 +30,8 @@ fun main(args: Array<String>) {
             tbs.sendMenu(botToken, chatId)
         }
 
-        if (data?.lowercase() == "statistics_clicked" && chatId != null) {
-            tbs.sendMessage(botToken, chatId, "Learned 10 words")
+        if (data?.lowercase() == CLICKED_STATISTICS && chatId != null) {
+            tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
         }
     }
 }
