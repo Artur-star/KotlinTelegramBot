@@ -16,11 +16,44 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendMessage(botToken: String, chatId: Int, text: String) {
+    fun sendMessage(botToken: String, chatId: Int, text: String): String {
         val encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8.toString())
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage?chat_id=$chatId&text=$encodedText"
         val client: HttpClient = HttpClient.newHttpClient()
         val httpRequest: HttpRequest = HttpRequest.newBuilder().uri(URI.create(urlSendMessage)).build()
-        client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
+        val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
+        return response.body()
+    }
+
+    fun sendMenu(botToken: String, chatId: Int): String {
+        val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
+        val sendMenuBody = """
+            {
+                "chat_id": $chatId,
+                "text": "Основное меню",
+                "reply_markup": {
+                    "inline_keyboard": [
+                        [
+                            {
+                                "text": "Learn words",
+                                "callback_data": "learn_words_clicked"
+                            },
+                            {
+                                "text": "Statistics",
+                                "callback_data": "statistics_clicked"
+                            }
+                        ]
+                    ]
+                }
+            }
+        """.trimIndent()
+
+        val client: HttpClient = HttpClient.newHttpClient()
+        val httpRequest: HttpRequest = HttpRequest.newBuilder().uri(URI.create(urlSendMessage))
+            .header("Content-type", "application/json")
+            .POST(HttpRequest.BodyPublishers.ofString(sendMenuBody))
+            .build()
+        val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
+        return response.body()
     }
 }
