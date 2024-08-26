@@ -16,7 +16,7 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendMessage(botToken: String, chatId: Int, text: String) : String {
+    fun sendMessage(botToken: String, chatId: Int, text: String): String {
         val encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8.toString())
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage?chat_id=$chatId&text=$encodedText"
         val client: HttpClient = HttpClient.newHttpClient()
@@ -25,7 +25,7 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendMenu(botToken: String, chatId: Int) : String {
+    fun sendMenu(botToken: String, chatId: Int): String {
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
         val sendMenuBody = """
             {
@@ -35,11 +35,11 @@ class TelegramBotService {
                     "inline_keyboard": [
                         [
                             {
-                                "text": "Изучить слова",
+                                "text": "Learn words",
                                 "callback_data": "learn_words_clicked"
                             },
                             {
-                                "text": "Статистика",
+                                "text": "Statistics",
                                 "callback_data": "statistics_clicked"
                             }
                         ]
