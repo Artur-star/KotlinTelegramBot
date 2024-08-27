@@ -6,6 +6,8 @@ import java.net.http.HttpResponse
 import java.nio.charset.StandardCharsets
 
 const val TELEGRAM_BASE_URL = "https://api.telegram.org"
+const val CLICKED_LEARN_WORDS: String = "learn_words_clicked"
+const val CLICKED_STATISTICS: String = "statistics_clicked"
 
 class TelegramBotService {
     fun getUpdates(botToken: String, updateId: Int): String {
