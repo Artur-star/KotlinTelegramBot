@@ -1,4 +1,5 @@
 fun main(args: Array<String>) {
+
     val tbs = TelegramBotService()
     val botToken = args[0]
     var updateId = 0
@@ -9,6 +10,10 @@ fun main(args: Array<String>) {
     val regexFindData = "\"data\":\"(.+?)\"".toRegex()
 
     val trainer = LearnWordsTrainer()
+    val question: Question = trainer.getNextQuestion() ?: run {
+        "Вы выучили все слова в базе"
+        return
+    }
     while (true) {
         Thread.sleep(2000)
         val updates = tbs.getUpdates(botToken, updateId)
@@ -32,6 +37,10 @@ fun main(args: Array<String>) {
 
         if (data?.lowercase() == CLICKED_STATISTICS && chatId != null) {
             tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
+        }
+
+        if (data?.lowercase() == CLICKED_LEARN_WORDS && chatId != null) {
+            tbs.sendQuestion(botToken, chatId, question)
         }
     }
 }
