@@ -1,4 +1,5 @@
 fun main(args: Array<String>) {
+
     val tbs = TelegramBotService()
     val botToken = args[0]
     var updateId = 0
@@ -32,6 +33,15 @@ fun main(args: Array<String>) {
 
         if (data?.lowercase() == CLICKED_STATISTICS && chatId != null) {
             tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
+        }
+
+        if (data?.lowercase() == CLICKED_LEARN_WORDS && chatId != null) {
+            val question: Question = trainer.getNextQuestion() ?: run {
+                tbs.sendMessage(botToken, chatId, "Вы выучили все слова в базе")
+                return
+            }
+
+            tbs.sendQuestion(botToken, chatId, question)
         }
     }
 }
