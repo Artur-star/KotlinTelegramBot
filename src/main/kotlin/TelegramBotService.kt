@@ -20,8 +20,7 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendQuestion(botToken: String, chatId: Int, question: Question) {
-
+    fun sendQuestion(botToken: String, chatId: Int, question: Question): String {
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
         val sendQuestionBody = """
 {
@@ -29,24 +28,11 @@ class TelegramBotService {
     "text": "${question.correctAnswer.original}",
     "reply_markup": {
         "inline_keyboard": [
-            [
-                {
-                    "text": "${question.variants[0].translate}",
-                    "callback_data": "$CALLBACK_DATA_ANSWER_PREFIX" + 1
-                },
-                {
-                    "text": "${question.variants[1].translate}",
-                    "callback_data": "$CALLBACK_DATA_ANSWER_PREFIX" + 2
-                },
-                {
-                    "text": "${question.variants[2].translate}",
-                    "callback_data": "$CALLBACK_DATA_ANSWER_PREFIX" + 3
-                },
-                {
-                    "text": "${question.variants[3].translate}",
-                    "callback_data": "$CALLBACK_DATA_ANSWER_PREFIX" + 4
-                }
-            ]
+            ${
+            question.variants.mapIndexed { index, word ->
+                "{\"text\": \"${word.translate}\",\"callback_data\": \"$CALLBACK_DATA_ANSWER_PREFIX$index\"}"
+            }
+        }
         ]
     }
 }
@@ -57,9 +43,10 @@ class TelegramBotService {
             .POST(HttpRequest.BodyPublishers.ofString(sendQuestionBody))
             .build()
         val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
+        return response.body()
     }
 
-    fun sendMessage(botToken: String, chatId: Int, text: String): String {
+    fun sendMessage(botToken: String, chatId: Int, text: String?): String {
         val encodedText = URLEncoder.encode(text, StandardCharsets.UTF_8.toString())
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage?chat_id=$chatId&text=$encodedText"
         val client: HttpClient = HttpClient.newHttpClient()
@@ -98,5 +85,13 @@ class TelegramBotService {
             .build()
         val response = client.send(httpRequest, HttpResponse.BodyHandlers.ofString())
         return response.body()
+    }
+
+    fun checkNextQuestionAndSend(trainer: LearnWordsTrainer, botToken: String, chatId: Int): Question? {
+        val question = trainer.getNextQuestion()
+        if (question == null) {
+            sendMessage(botToken, chatId, "Вы выучили все слова в базе")
+        } else sendQuestion(botToken, chatId, question)
+        return question
     }
 }
