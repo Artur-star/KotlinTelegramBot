@@ -12,7 +12,7 @@ const val CLICKED_STATISTICS: String = "statistics_clicked"
 
 class TelegramBotService {
 
-    fun getUpdates(botToken: String, updateId: Int): String {
+    fun getUpdates(botToken: String, updateId: Long): String {
         val urlGetUpdates = "$TELEGRAM_BASE_URL/bot$botToken/getUpdates?offset=$updateId"
         val client: HttpClient = HttpClient.newHttpClient()
         val httpRequest: HttpRequest = HttpRequest.newBuilder().uri(URI.create(urlGetUpdates)).build()

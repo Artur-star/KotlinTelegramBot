@@ -1,11 +1,48 @@
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.json.Json
+
+@Serializable
+data class Update(
+    @SerialName("update_id")
+    val updateId: Long,
+    @SerialName("callback_query")
+    val callbackQuery: CallbackQuery? = null,
+    @SerialName("message")
+    val message: Message? = null,
+)
+
+@Serializable
+data class Response(
+    @SerialName("result")
+    val result: List<Update>
+)
+
+@Serializable
+data class Message(
+    @SerialName("text")
+    val text: String,
+)
+
+@Serializable
+data class CallbackQuery(
+    @SerialName("data")
+    val data: String,
+)
+
 fun main(args: Array<String>) {
     val botToken = args[0]
-    var updateId = 0
+    var lastUpdateId = 0L
 
-    val regexFindUpdateId = "\"update_id\":(.+?),\n".toRegex()
-    val regexFindText = "\"text\":\"([^\"]*)\"".toRegex()
-    val regexFindChatId = "\"chat\":\\{\"id\":(.+?),\"first_name\"".toRegex()
-    val regexFindData = "\"data\":\"(.+?)\"".toRegex()
+    val json = Json{
+        ignoreUnknownKeys = true
+    }
+
+//    val regexFindUpdateId = "\"update_id\":(.+?),\n".toRegex()
+//    val regexFindText = "\"text\":\"([^\"]*)\"".toRegex()
+//    val regexFindChatId = "\"chat\":\\{\"id\":(.+?),\"first_name\"".toRegex()
+//    val regexFindData = "\"data\":\"(.+?)\"".toRegex()
 
     val trainer = LearnWordsTrainer()
     val tbs = TelegramBotService()
@@ -13,17 +50,24 @@ fun main(args: Array<String>) {
 
     while (true) {
         Thread.sleep(2000)
-        val updates = tbs.getUpdates(botToken, updateId)
-        println(updates)
+        val responseString = tbs.getUpdates(botToken, lastUpdateId)
+        println(responseString)
 
-        val text = regexFindText.find(updates)?.groups?.get(1)?.value
-        val chatIdString = regexFindChatId.find(updates)?.groups?.get(1)?.value
-        val data = regexFindData.find(updates)?.groups?.get(1)?.value ?: "Данных нет"
+        val response: Response = json.decodeFromString(responseString)
+        val updates = response.result
+        val firstUpdate = updates.firstOrNull() ?: continue
+        val updateId = firstUpdate.updateId
+        lastUpdateId = updateId + 1
+        val message = firstUpdate.message?.text
+
+        val text = regexFindText.find(responseString)?.groups?.get(1)?.value
+        val chatIdString = regexFindChatId.find(responseString)?.groups?.get(1)?.value
+        val data = regexFindData.find(responseString)?.groups?.get(1)?.value ?: "Данных нет"
 
         val chatId = chatIdString?.toInt()
 
-        val updateIdString = regexFindUpdateId.find(updates)?.groups?.get(1)?.value?.toIntOrNull() ?: continue
-        updateId = updateIdString + 1
+        val updateIdString = regexFindUpdateId.find(responseString)?.groups?.get(1)?.value?.toIntOrNull() ?: continue
+        lastUpdateId = updateIdString + 1
 
         if (text?.lowercase() == "/start" && chatId != null) {
             tbs.sendMenu(botToken, chatId)
