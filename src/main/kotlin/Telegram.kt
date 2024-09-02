@@ -23,26 +23,31 @@ data class Response(
 data class Message(
     @SerialName("text")
     val text: String,
+    @SerialName("chat")
+    val chat: Chat
 )
 
 @Serializable
 data class CallbackQuery(
     @SerialName("data")
     val data: String,
+    @SerialName("message")
+    val message: Message? = null
+)
+
+@Serializable
+data class Chat(
+    @SerialName("id")
+    val id: Long
 )
 
 fun main(args: Array<String>) {
     val botToken = args[0]
     var lastUpdateId = 0L
 
-    val json = Json{
+    val json = Json {
         ignoreUnknownKeys = true
     }
-
-//    val regexFindUpdateId = "\"update_id\":(.+?),\n".toRegex()
-//    val regexFindText = "\"text\":\"([^\"]*)\"".toRegex()
-//    val regexFindChatId = "\"chat\":\\{\"id\":(.+?),\"first_name\"".toRegex()
-//    val regexFindData = "\"data\":\"(.+?)\"".toRegex()
 
     val trainer = LearnWordsTrainer()
     val tbs = TelegramBotService()
@@ -58,37 +63,31 @@ fun main(args: Array<String>) {
         val firstUpdate = updates.firstOrNull() ?: continue
         val updateId = firstUpdate.updateId
         lastUpdateId = updateId + 1
-        val message = firstUpdate.message?.text
 
-        val text = regexFindText.find(responseString)?.groups?.get(1)?.value
-        val chatIdString = regexFindChatId.find(responseString)?.groups?.get(1)?.value
-        val data = regexFindData.find(responseString)?.groups?.get(1)?.value ?: "Данных нет"
-
-        val chatId = chatIdString?.toInt()
-
-        val updateIdString = regexFindUpdateId.find(responseString)?.groups?.get(1)?.value?.toIntOrNull() ?: continue
-        lastUpdateId = updateIdString + 1
+        val text = firstUpdate.message?.text
+        val chatId = firstUpdate.message?.chat?.id ?: firstUpdate.callbackQuery?.message?.chat?.id
+        val data = firstUpdate.callbackQuery?.data ?: "Данных нет"
 
         if (text?.lowercase() == "/start" && chatId != null) {
-            tbs.sendMenu(botToken, chatId)
+            tbs.sendMenu(json, botToken, chatId)
         }
 
         if (data.lowercase() == CLICKED_STATISTICS && chatId != null) {
-            tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
+            tbs.sendMessage(json, botToken, chatId, trainer.getStatistics().toString())
         }
 
         if (data.lowercase() == CLICKED_LEARN_WORDS && chatId != null) {
-            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+            question = tbs.checkNextQuestionAndSend(json, trainer, botToken, chatId)
         }
 
         if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true) && chatId != null) {
             val answerUser = data.substringAfter("answer_").toInt()
             if (trainer.checkAnswer(answerUser)) {
-                tbs.sendMessage(botToken, chatId, "Правильно!")
-            } else tbs.sendMessage(botToken, chatId, question?.correctAnswer?.translate ?: continue)
-            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+                tbs.sendMessage(json, botToken, chatId, "Правильно!")
+            } else tbs.sendMessage(json, botToken, chatId, question?.correctAnswer?.translate ?: continue)
+            question = tbs.checkNextQuestionAndSend(json, trainer, botToken, chatId)
         } else if (text?.lowercase() == "hello" && chatId != null) {
-            tbs.sendMessage(botToken, chatId, "Hello")
+            tbs.sendMessage(json, botToken, chatId, "Hello")
         }
     }
 }
