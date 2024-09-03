@@ -50,7 +50,7 @@ fun main(args: Array<String>) {
     }
 
     val trainer = LearnWordsTrainer()
-    val tbs = TelegramBotService()
+    val tbs = TelegramBotService(json)
     var question: Question? = null
 
     while (true) {
@@ -73,21 +73,21 @@ fun main(args: Array<String>) {
         }
 
         if (data.lowercase() == CLICKED_STATISTICS && chatId != null) {
-            tbs.sendMessage(json, botToken, chatId, trainer.getStatistics().toString())
+            tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
         }
 
         if (data.lowercase() == CLICKED_LEARN_WORDS && chatId != null) {
-            question = tbs.checkNextQuestionAndSend(json, trainer, botToken, chatId)
+            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
         }
 
         if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true) && chatId != null) {
             val answerUser = data.substringAfter("answer_").toInt()
             if (trainer.checkAnswer(answerUser)) {
-                tbs.sendMessage(json, botToken, chatId, "Правильно!")
-            } else tbs.sendMessage(json, botToken, chatId, question?.correctAnswer?.translate ?: continue)
-            question = tbs.checkNextQuestionAndSend(json, trainer, botToken, chatId)
+                tbs.sendMessage(botToken, chatId, "Правильно!")
+            } else tbs.sendMessage(botToken, chatId, question?.correctAnswer?.translate ?: continue)
+            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
         } else if (text?.lowercase() == "hello" && chatId != null) {
-            tbs.sendMessage(json, botToken, chatId, "Hello")
+            tbs.sendMessage(botToken, chatId, "Hello")
         }
     }
 }

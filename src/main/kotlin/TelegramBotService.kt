@@ -36,7 +36,7 @@ data class InlineKeyboard(
     val callbackData: String,
 )
 
-class TelegramBotService {
+class TelegramBotService(private val json: Json) {
 
     fun getUpdates(botToken: String, updateId: Long): String {
         val urlGetUpdates = "$TELEGRAM_BASE_URL/bot$botToken/getUpdates?offset=$updateId"
@@ -46,7 +46,7 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendQuestion(json: Json, botToken: String, chatId: Long, question: Question): String {
+    private fun sendQuestion(botToken: String, chatId: Long, question: Question): String {
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
 
         val requestBody = SendMessageRequest(
@@ -69,7 +69,7 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun sendMessage(json: Json, botToken: String, chatId: Long, text: String): String {
+    fun sendMessage(botToken: String, chatId: Long, text: String): String {
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
 
         val requestBody = SendMessageRequest(
@@ -115,11 +115,11 @@ class TelegramBotService {
         return response.body()
     }
 
-    fun checkNextQuestionAndSend(json: Json, trainer: LearnWordsTrainer, botToken: String, chatId: Long): Question? {
+    fun checkNextQuestionAndSend(trainer: LearnWordsTrainer, botToken: String, chatId: Long): Question? {
         val question = trainer.getNextQuestion()
         if (question == null) {
-            sendMessage(json, botToken, chatId, "Вы выучили все слова в базе")
-        } else sendQuestion(json, botToken, chatId, question)
+            sendMessage(botToken, chatId, "Вы выучили все слова в базе")
+        } else sendQuestion(botToken, chatId, question)
         return question
     }
 }
