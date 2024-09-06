@@ -77,7 +77,7 @@ fun handleUpdate(
 
     val trainer = trainers.getOrPut(chatId) { LearnWordsTrainer("$chatId.txt") }
 
-    if (text?.lowercase() == "/start") {
+        if (text?.lowercase() == TEXT_START) {
         tbs.sendMenu(json, botToken, chatId)
     }
 
@@ -90,7 +90,7 @@ fun handleUpdate(
     }
 
     if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true)) {
-        val answerUser = data.substringAfter("answer_").toInt()
+        val answerUser = data.substringAfter(CALLBACK_DATA_ANSWER_PREFIX).toInt()
         if (trainer.checkAnswer(answerUser)) {
             tbs.sendMessage(botToken, chatId, "Правильно!")
         } else {
@@ -101,8 +101,8 @@ fun handleUpdate(
             )
         }
         tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
-    } else if (text?.lowercase() == "hello") {
-        tbs.sendMessage(botToken, chatId, "Hello")
+    } else if (text?.lowercase() == TEXT_HELLO) {
+        tbs.sendMessage(botToken, chatId, TEXT_HELLO)
     }
 
     if (data == RESET_ClICKED) {

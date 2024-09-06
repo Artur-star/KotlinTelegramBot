@@ -67,21 +67,21 @@ class LearnWordsTrainer(
     }
 
     private fun saveDictionary() {
-        val file: File = File(fileName)
-        file.writeText("")
+        val fileName = File(fileName)
+        fileName.writeText("")
         for (words in dictionary) {
-            file.appendText("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
+            fileName.appendText("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
         }
     }
 
     private fun loadDictionary(): List<Word> {
         val dictionary = mutableListOf<Word>()
-        val file = File(fileName)
-        if (!file.exists()) {
-            File("dictionary.txt").copyTo(file)
+        val fileName = File(fileName)
+        if (!fileName.exists()) {
+            File("dictionary.txt").copyTo(fileName)
         }
 
-        file.forEachLine { line ->
+        fileName.forEachLine { line ->
             val parts = line.split("|")
             val original = parts[0]
             val translate = parts[1]

@@ -12,6 +12,8 @@ const val CALLBACK_DATA_ANSWER_PREFIX = "answer_"
 const val RESET_ClICKED = "reset_clicked"
 const val CLICKED_LEARN_WORDS: String = "learn_words_clicked"
 const val CLICKED_STATISTICS: String = "statistics_clicked"
+const val TEXT_START: String = "/start"
+const val TEXT_HELLO: String = "Hello"
 
 @Serializable
 data class SendMessageRequest(
