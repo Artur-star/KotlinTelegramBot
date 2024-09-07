@@ -19,9 +19,13 @@ data class Question(
     val correctAnswer: Word,
 )
 
-class LearnWordsTrainer(private val learnAnswerQuestion: Int = 3, private val countOfQuestionWords: Int = 4) {
+class LearnWordsTrainer(
+    private val fileName: String = "dictionary.txt",
+    private val learnAnswerQuestion: Int = 3,
+    private val countOfQuestionWords: Int = 4
+) {
 
-    private var question: Question? = null
+    var question: Question? = null
     private val dictionary = loadDictionary()
 
     fun getStatistics(): Statistics {
@@ -56,26 +60,28 @@ class LearnWordsTrainer(private val learnAnswerQuestion: Int = 3, private val co
             val correctAnswerId: Int = it.variants.indexOf(it.correctAnswer)
             if (correctAnswerId == userAnswerIndex) {
                 it.correctAnswer.correctAnswersCount++
-                saveDictionary(dictionary)
+                saveDictionary()
                 true
             } else false
         } ?: false
     }
 
-    private fun saveDictionary(listWords: List<Word>) {
-        val file: File = File("dictionary.txt")
-        file.writeText("")
-        for (words in listWords) {
-            file.appendText("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
+    private fun saveDictionary() {
+        val fileName = File(fileName)
+        fileName.writeText("")
+        for (words in dictionary) {
+            fileName.appendText("${words.original}|${words.translate}|${words.correctAnswersCount}\n")
         }
     }
 
     private fun loadDictionary(): List<Word> {
         val dictionary = mutableListOf<Word>()
+        val fileName = File(fileName)
+        if (!fileName.exists()) {
+            File("dictionary.txt").copyTo(fileName)
+        }
 
-        val file = File("dictionary.txt")
-
-        file.forEachLine { line ->
+        fileName.forEachLine { line ->
             val parts = line.split("|")
             val original = parts[0]
             val translate = parts[1]
@@ -85,5 +91,10 @@ class LearnWordsTrainer(private val learnAnswerQuestion: Int = 3, private val co
             dictionary.add(word)
         }
         return dictionary
+    }
+
+    fun resetProgress() {
+        dictionary.forEach { it.correctAnswersCount = 0 }
+        saveDictionary()
     }
 }

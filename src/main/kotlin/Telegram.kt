@@ -44,14 +44,12 @@ data class Chat(
 fun main(args: Array<String>) {
     val botToken = args[0]
     var lastUpdateId = 0L
-
+    val trainers = HashMap<Long, LearnWordsTrainer>()
     val json = Json {
         ignoreUnknownKeys = true
     }
 
-    val trainer = LearnWordsTrainer()
     val tbs = TelegramBotService(json)
-    var question: Question? = null
 
     while (true) {
         Thread.sleep(2000)
@@ -59,36 +57,57 @@ fun main(args: Array<String>) {
         println(responseString)
 
         val response: Response = json.decodeFromString(responseString)
-        val updates = response.result
-        val firstUpdate = updates.firstOrNull() ?: continue
-        val updateId = firstUpdate.updateId
-        lastUpdateId = updateId + 1
+        if (response.result.isEmpty()) continue
+        val sortedUpdates = response.result.sortedBy { it.updateId }
+        sortedUpdates.forEach { handleUpdate(it, json, botToken, trainers, tbs) }
+        lastUpdateId = sortedUpdates.last().updateId + 1
+    }
+}
 
-        val text = firstUpdate.message?.text
-        val chatId = firstUpdate.message?.chat?.id ?: firstUpdate.callbackQuery?.message?.chat?.id
-        val data = firstUpdate.callbackQuery?.data ?: "Данных нет"
+fun handleUpdate(
+    firstUpdate: Update,
+    json: Json,
+    botToken: String,
+    trainers: HashMap<Long, LearnWordsTrainer>,
+    tbs: TelegramBotService
+) {
+    val text = firstUpdate.message?.text
+    val chatId = firstUpdate.message?.chat?.id ?: firstUpdate.callbackQuery?.message?.chat?.id ?: return
+    val data = firstUpdate.callbackQuery?.data ?: "Данных нет"
 
-        if (text?.lowercase() == "/start" && chatId != null) {
-            tbs.sendMenu(json, botToken, chatId)
+    val trainer = trainers.getOrPut(chatId) { LearnWordsTrainer("$chatId.txt") }
+
+        if (text?.lowercase() == TEXT_START) {
+        tbs.sendMenu(json, botToken, chatId)
+    }
+
+    if (data.lowercase() == CLICKED_STATISTICS) {
+        tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
+    }
+
+    if (data.lowercase() == CLICKED_LEARN_WORDS) {
+        tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+    }
+
+    if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true)) {
+        val answerUser = data.substringAfter(CALLBACK_DATA_ANSWER_PREFIX).toInt()
+        if (trainer.checkAnswer(answerUser)) {
+            tbs.sendMessage(botToken, chatId, "Правильно!")
+        } else {
+            tbs.sendMessage(
+                botToken,
+                chatId,
+                "${trainer.question?.correctAnswer?.original} - ${trainer.question?.correctAnswer?.translate}"
+            )
         }
+        tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+    } else if (text?.lowercase() == TEXT_HELLO) {
+        tbs.sendMessage(botToken, chatId, TEXT_HELLO)
+    }
 
-        if (data.lowercase() == CLICKED_STATISTICS && chatId != null) {
-            tbs.sendMessage(botToken, chatId, trainer.getStatistics().toString())
-        }
-
-        if (data.lowercase() == CLICKED_LEARN_WORDS && chatId != null) {
-            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
-        }
-
-        if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true) && chatId != null) {
-            val answerUser = data.substringAfter("answer_").toInt()
-            if (trainer.checkAnswer(answerUser)) {
-                tbs.sendMessage(botToken, chatId, "Правильно!")
-            } else tbs.sendMessage(botToken, chatId, question?.correctAnswer?.translate ?: continue)
-            question = tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
-        } else if (text?.lowercase() == "hello" && chatId != null) {
-            tbs.sendMessage(botToken, chatId, "Hello")
-        }
+    if (data == RESET_ClICKED) {
+        trainer.resetProgress()
+        tbs.sendMessage(botToken, chatId, "Прогресс сброшен")
     }
 }
 

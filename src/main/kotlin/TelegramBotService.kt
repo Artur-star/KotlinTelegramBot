@@ -9,8 +9,11 @@ import java.net.http.HttpResponse
 
 const val TELEGRAM_BASE_URL = "https://api.telegram.org"
 const val CALLBACK_DATA_ANSWER_PREFIX = "answer_"
+const val RESET_ClICKED = "reset_clicked"
 const val CLICKED_LEARN_WORDS: String = "learn_words_clicked"
 const val CLICKED_STATISTICS: String = "statistics_clicked"
+const val TEXT_START: String = "/start"
+const val TEXT_HELLO: String = "Hello"
 
 @Serializable
 data class SendMessageRequest(
@@ -97,8 +100,11 @@ class TelegramBotService(private val json: Json) {
             replyMarkup = ReplyMarkup(
                 listOf(
                     listOf(
-                        InlineKeyboard(text = "Learn words", callbackData = "learn_words_clicked"),
-                        InlineKeyboard(text = "Statistics", callbackData = "statistics_clicked")
+                        InlineKeyboard(text = "Learn words", callbackData = CLICKED_LEARN_WORDS),
+                        InlineKeyboard(text = "Statistics", callbackData = CLICKED_STATISTICS)
+                    ),
+                    listOf(
+                        InlineKeyboard(text = "Reset progress", callbackData = RESET_ClICKED),
                     )
                 )
             )
@@ -115,11 +121,10 @@ class TelegramBotService(private val json: Json) {
         return response.body()
     }
 
-    fun checkNextQuestionAndSend(trainer: LearnWordsTrainer, botToken: String, chatId: Long): Question? {
+    fun checkNextQuestionAndSend(trainer: LearnWordsTrainer, botToken: String, chatId: Long) {
         val question = trainer.getNextQuestion()
         if (question == null) {
             sendMessage(botToken, chatId, "Вы выучили все слова в базе")
         } else sendQuestion(botToken, chatId, question)
-        return question
     }
 }
