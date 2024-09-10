@@ -1,5 +1,1629 @@
-hello|привет|0
-dog|собака|0
-cat|кошка|0
-apple|яблоко|0
-book|книга|0
+able | способный|0
+be able | мочь, быть в состоянии|0
+about | о, около|0
+abroad | за границей|0
+absence | отсутствие|0
+absolute | абсолютный, полный, безусловный|0
+absurd | абсурдный, нелепый|0
+accent | ставить ударение|0
+accident | авария, несчастный случай|0
+according to | в соответствии, согласно|0
+account | счёт|0
+accounts | бухгалтерия, счетоводство|0
+on my account | по моей причине|0
+act | поступать, n. акт (часть пьесы)|0
+acting | игра артистов|0
+actress | актриса|0
+actually | фактически, на самом деле|0
+address | адрес|0
+advance | прогресс|0
+in advance | заранее, вперёд|0
+advantage | преимущество|0
+advertise | извещать|0
+advertisement | объявление|0
+advise | советовать|0
+afford | позволить себе|0
+afraid | испуганный|0
+after | за, после|0
+after all | впрочем, в конце концов|0
+afternoon | время после полудня|0
+again | снова, опять|0
+age | возраст|0
+for ages | целая вечность, очень долго|0
+through the ages | на протяжении веков|0
+agency | агентство|0
+ago | тому назад|0
+agree | соглашаться|0
+ahead | вперёд, впереди|0
+aid | помощь|0
+alcohol | алкоголь|0
+after all | впрочем, в конце концов|0
+at all | вообще, совсем|0
+allot | наделять, предназначать|0
+allow | позволять, разрешать|0
+I am allowed (to) | мне можно|0
+almost | почти|0
+alone | одинокий, один|0
+along | вдоль, по, вперёд|0
+Alps |pl. Альпы|0
+alternate | чередующийся|0
+altogether | всецело, вполне|0
+always | всегда|0
+amateur | любитель|0
+ancient | древний|0
+ancient monument | памятник старины|0
+anniversary | годовщина|0
+another | pron. ещё один, другой|0
+another five minutes | еще пять минут|0
+answer | отвечать n. ответ|0
+ant | муравей|0
+anyone | кто-то, кто-нибудь|0
+anything | что-нибудь, что-то|0
+anyway | каким бы то ни было образом, так или иначе|0
+apart from | prep, кроме|0
+appartment | комната, апартамент|0
+apparently | по-видимому|0
+appear | показываться, предстать (перед судом)|0
+appetite | аппетит|0
+apple | яблоко|0
+apple pie | яблочный пирог|0
+application | прошение|0
+apply | обращаться (за разрешением, справкой)|0
+approach | приближаться|0
+approval | одобрение, утверждение|0
+archaeological | археологический|0
+architect | архитектор|0
+arm | рука (от кисти до плеча)|0
+army | армия|0
+arrange | приводить в порядок, устраивать|0
+arrangements | pl. мероприятия, формальности|0
+arrive | прибывать|0
+article | статья|0
+artificial | искусственный|0
+as well | также|0
+aside | в сторону, в стороне|0
+ask | спрашивать, просить|0
+asleep | спящий|0
+assembly | ассамблея|0
+assembly hall | зал заседаний|0
+assistant | ассистент|0
+association | ассоциация, общество, союз|0
+assure | уверять|0
+astronomy | астрономия|0
+attain | достигнуть|0
+attend to sthg | заниматься чем-либо|0
+attention | внимание|0
+pay attention | обращать внимание|0
+attic | чердак|0
+attractions | pi. прелести|0
+attractive | привлекательный, притягательный|0
+audience | публика, слушатели, зрители|0
+aunt | тетя, тётка|0
+Austrian | австрийский|0
+avenue | дорога, аллея|0
+avoid | избегать|0
+away | далеко, прочь|0
+right away | тотчас|0
+awful | ужасный, страшный|0
+baby | младенец|0
+back | задний adv. обратно|0
+back door | кухонные двери|0
+back up | поддерживать|0
+bad | плохой|0
+badly | плохо|0
+bake | печь|0
+baker | пекарь|0
+ballet | балет|0
+bank | банк|0
+barber | парикмахер|0
+bargain | торговая сделка, выгодная покупка|0
+bath | купание, ванна|0
+bathroom | ванная комната|0
+beautiful | красивый|0
+become | становиться|0
+bed | кровать|0
+bedroom | спальня|0
+beef | говядина|0
+been | Pple. от be|0
+beer | пиво|0
+beforhand | заранее, заблаговременно|0
+begin | начинать|0
+beginning | начало|0
+behave | вести себя|0
+being | существо, человек|0
+bench | скамья|0
+besides | кроме того|0
+best | наилучший|0
+better | лучше|0
+big | большой|0
+bilberry | черника|0
+bill | счёт|0
+birthday | день рождения|0
+biscuit | сухое печенье|0
+bit | кусочек, частица|0
+black | чёрный|0
+blade | лезвие|0
+block | жилой дом|0
+blonde | блондинка|0
+blouse | блузка|0
+blue | голубой|0
+boar | хряк|0
+wild boar | кабан, дикая свинья|0
+boat | лодка|0
+bolt | запирать на засов|0
+book | | заказывать (железнодорожный билет, билет на самолет)|0
+booking | резервация|0
+bookshop | книжный магазин|0
+boot | ботинок, отделение для багажа|0
+both |, pron. оба|0
+bother | беспокоить, надоедать|0
+bottle | бутылка|0
+bottom | дно, низ|0
+there's bound to be | обязательно будет|0
+bowl | кубок, чаша|0
+boy | мальчик|0
+brake | тормозить|0
+brand new | совершенно новый|0
+bread | хлеб|0
+break | ломать, разбивать|0
+breakfast | завтрак|0
+breathe | дышать|0
+brilliant | блестящий, выдающийся|0
+bring | приносить, привозить, приводить|0
+bring in | вносить|0
+bring up | воспитывать|0
+bring out | выносить|0
+British | (велико) британский|0
+broken |Pple. от break|0
+brother | брат|0
+brown | коричневый|0
+bruise | синяк v. подставлять синяки|0
+brush up | вычистить|0
+Brussels sprouts | pl. брюссельская капуста|0
+bucket | ведро|0
+builder | строитель|0
+bump | ухаб|0
+burn | гореть, пылать|0
+bus | автобус|0
+bush | куст|0
+business | дело, занятие|0
+busy | занятой|0
+butcher | мясник|0
+butter | масло|0
+buy | покупать|0
+cafe | кафе|0
+call | звать, называть, навещать|0
+call out | вызывать|0
+calm | спокойный|0
+came |T. от come|0
+camera | фотоаппарат|0
+camp | лагерь, v. располагаться лагерем|0
+cancel | отменять, аннулировать|0
+canteen | столовая|0
+car | автомобиль|0
+card-table | карточный столик|0
+саrе (to do sthg.) | иметь желание|0
+careful | осторожный, внимательный|0
+carnet | паспорт (см. сц. 12)|0
+carpentry | плотничное дело|0
+carpet | ковёр|0
+case | случай, судебное дело|0
+in any case | во всяком случае|0
+cashier | кассир|0
+cashmere | кашемир|0
+cat | кот|0
+catch | ловить, схватить|0
+cathedral | собор|0
+caught |T. и Pa.Pple. от catch|0
+celebration | празднование|0
+centre | центр, середина|0
+certainly | несомненно, непременно|0
+chair | стул|0
+chairman | председатель|0
+chance | шанс, возможность|0
+change | сдача, изменение, перемена|0
+for a change | для разнообразия|0
+change | сменять, заменять|0
+chap | малый, парень|0
+check | проверять, контролировать|0
+cheese | сыр|0
+cheque | банковый чек|0
+chess | шахматы|0
+chicken | цыплёнок|0
+children |pl. дети|0
+chilly | прохладный, adv. зябко, холодно|0
+chimney | труба (дымовая, вытяжная)|0
+china | фарфор|0
+chips |pl. тонкие ломтики поджаренного картофеля|0
+choose | выбирать|0
+chop | отбивная котлета|0
+chose |T. от choose|0
+chosen |Pple. от choose|0
+Christmas | рождество|0
+cinder | пепел|0
+cinema | кино|0
+class | класс, урок|0
+classroom | классная комната|0
+clean | чистый|0
+clear | ясный, чистый|0
+clockwork | заводной|0
+close | закрывать|0
+clothes |pl. одежда|0
+coal | уголь|0
+coal-mine | угольная шахта|0
+coat | пиджак, пальто|0
+co-driver | шофёр, сменяющий другого шофёра|0
+coffee | кофе|0
+coincidence | совпадение|0
+cold | холодный, n. простуда|0
+collapsible | складной|0
+collect | собирать, отбирать|0
+colour | цвет|0
+come | приходить, приезжать|0
+come round | зайти (на минутку)|0
+come up | подойти|0
+come up with an idea | подать мысль|0
+comfort | комфорт|0
+comfortable | удобный|0
+committee | комитет, комиссия|0
+company | товарищество, компания|0
+compartment | купе, перегородка|0
+complain | жаловаться|0
+complete | заканчивать|0
+concentrate | сосредоточиваться, концентрироваться|0
+concentration | концентрация, сосредоточенность|0
+concert | концерт|0
+concession | уступка|0
+conclusion | заключение|0
+condition | условие|0
+conduct | вести|0
+confess | признаться, исповедаться|0
+confirm | подтвердить|0
+congenial | конгениальный, близкий по духу|0
+congress | конгресс|0
+conservative | консервативный, охранительный|0
+considerable | значительный|0
+consist of | состоять (из)|0
+constable | констебль, полицейский|0
+constant | постоянный|0
+consulate | консульство|0
+continent | континент|0
+contraption | приспособление|0
+cook | стряпать, варить(-ся)|0
+cooker | плита, печь|0
+cooler | холодильник|0
+corner | угол|0
+corpse | труп|0
+correct | исправлять|0
+correspondence | корреспонденция|0
+Cossack | казак|0
+cost | стоить|0
+cottage | коттедж, загородный дом|0
+council | совет|0
+councillor | член совета|0
+counter | прилавок, стойка|0
+country | страна, деревня|0
+couple | пара|0
+course | курс|0
+of course | конечно|0
+court | суд|0
+cousin | кузина, кузен|0
+cover | накрывать|0
+cram | переполнять, впихивать|0
+crash | треск|0
+crawl | ползать|0
+cream | сливки, крем|0
+crease | мяться|0
+crease-resistant | немнущийся|0
+creature | создание|0
+credit | кредит|0
+do credit | делать честь кому-либо|0
+crone | старуха, старая карга|0
+cross | переходить, a. злой, раздраженный|0
+crowd | толпа|0
+crowded | переполненный|0
+crown | корона|0
+cruise | морское путешествие|0
+cucumber | огурец|0
+cup | чашка, кубок|0
+cupboard | шкаф|0
+currency | валюта|0
+custard | сладкий соус из сливок|0
+customs |pl. таможня|0
+customs clearance point | таможенный зал|0
+cut | резать, стричь, n. разрез, порез, рана|0
+cutlery | ножевые изделия|0
+cutting | отросток, побег|0
+daily | ежедневный|0
+damage | вред, повреждение|0
+damages |pl. компенсация за убытки|0
+I daresay | я полагаю, осмелюсь сказать, думаю|0
+darling | любимый(-ая)|0
+darts |pl. название игры|0
+dash out | выскочить, выбежать|0
+dash it! | к чёрту!|0
+day | день|0
+deal | иметь дело с, вести дело|0
+deal | (в выражении):|0
+a great deal | много, масса|0
+dear | дорогой, любимый, n. возлюбленный|0
+dear me! | о, боже!|0
+decent | порядочный, приличный|0
+decide | решаться|0
+declaration | декларация|0
+decorate | декорировать, украшать, отделывать (дом)|0
+defect | дефект, недостаток|0
+definitely | решительно, определённо|0
+delay | откладывать|0
+delicious | очень вкусный|0
+delighted | рад, обрадованный|0
+dentist | зубной врач|0
+department | отдел, департамент|0
+depend | зависеть (от)|0
+deserted | пустой, покинутый|0
+deserve | заслужить|0
+design | проектировать|0
+detective | детективный|0
+different | разный|0
+difficult | трудный|0
+dig | копать|0
+dig out | выкапывать|0
+dinner | обед|0
+direction | направление|0
+dirt | грязь|0
+dirty | грязный|0
+disadvantage | невыгода, невыгодное положение|0
+disappear | исчезать|0
+disappoint | разочаровать|0
+discuss | дискутировать|0
+dish up | подавать еду на стол|0
+disillusion | разочарование|0
+dislike | не любить|0
+display | выставлять, показывать|0
+disposal | размещение|0
+dissension | разногласие, раздоры|0
+distinctly | отчетливо, ясно|0
+disturb | мешать, беспокоить|0
+do | делать|0
+do a room up | приводить комнату в порядок|0
+do one's best | делать всё, от себя зависящее|0
+do well | хорошо себя проявить|0
+do without sthg. | обойтись без чего-либо|0
+docks |pl. доки|0
+doctor | доктор, врач|0
+dog | собака|0
+doll | кукла|0
+done |Pple. от do|0
+door | дверь|0
+door-bell | дверной звонок|0
+doorstep | порог|0
+double | двойной|0
+downstairs | внизу, вниз|0
+dozen | дюжина|0
+drag | тянуть, волочить|0
+dramatic | драматический|0
+dramatic society | драмкружок|0
+dramatist | драматург|0
+dream | сон, v. сниться|0
+dress | платье|0
+dressmaking | шитьё дамского платья|0
+drink | пить, n. напиток|0
+drive | вести машину, n. катанье на машине|0
+driver | шофёр|0
+driving licence | водительские права|0
+drop | капля, v. уронить|0
+dry | сухой|0
+duck | утка|0
+dull | скучный, тусклый|0
+dumb | немой, глупый|0
+early | ранний, adv. рано|0
+earn | зарабатывать|0
+earth | земля|0
+eastern | восточный|0
+easy | лёгкий|0
+eat | есть|0
+education | образование, обучение|0
+effort | усилие|0
+egg | яйцо|0
+either | и conj. также; или|0
+elaborate | сложный, искусно сделанный|0
+electric | электрический|0
+electrician | электромонтёр|0
+electronics | электроника|0
+else | еще, кроме, иначе|0
+employee | работающий по найму|0
+empty | пустой|0
+end | кончать(ся), n. конец|0
+energetic | энергичный|0
+engineer | инженер|0
+English | английский, n. английский язык|0
+enjoy | радоваться, наслаждаться, получать удовольствие|0
+enormous | огромный|0
+enough | достаточно|0
+enter | входить|0
+enter sthg. on a form | вписать что-либо в бланк|0
+enthusiasm | энтузиазм|0
+enthusiast | энтузиаст|0
+entire | полный, целый|0
+episode | эпизод|0
+escape | бежать|0
+especially | особенно|0
+Europe | Европа|0
+even | даже|0
+evening | вечер|0
+every | каждый|0
+everybody | каждый, всякий (человек)|0
+everyday | ежедневный|0
+exactly | точно, именно|0
+exaggerate | преувеличивать|0
+exam | сокращ. от:|0
+examination | экзамен|0
+excellent | отличный, превосходный|0
+exciting | возбуждающий, захватывающий|0
+excuse | прощать|0
+excuse me… |.. (при обращении к кому-либо)|0
+exhausted | истощенный, изнурённый|0
+exhibition | выставка|0
+expect | ожидать|0
+expense | расход|0
+expensive | дорогой|0
+experience | (жизненный) опыт|0
+experimental | экспериментальный|0
+explain | объяснить|0
+expression | выражение, оборот речи|0
+extravagant | сумасбродный, расточительный|0
+eye | глаз|0
+face | лицо, v. стоять лицом к... смотреть в лицо (чему-нибудь)|0
+fact | факт|0
+fade | блёкнуть|0
+fade-proof | нелиняющий|0
+faint | падать в обморок|0
+fall | падать|0
+fall down | упасть|0
+fall out | выпадать|0
+family | семья|0
+famous | известный|0
+fancy | орнаментальный, n. воображение, v. представлять себе|0
+farewell | прощание|0
+fast | быстрый|0
+fast asleep | крепко спящий|0
+father | отец|0
+fault | вина, ошибка|0
+favour | благосклонность, любезность, одолжение|0
+feather-brained | пустой, ветреный|0
+feel | чувствовать|0
+feeling | чувство|0
+fellow | человек, парень|0
+felt |T. от feel|0
+fence | забор|0
+few | и pron. немного, мало|0
+a few | несколько|0
+field | поле|0
+fill | наполнять|0
+fill in | заполнять|0
+film | фильм|0
+final | последний, финальный|0
+find | найти|0
+find out | узнать|0
+finder | нашедший (в знач. существ.)|0
+fine | изящный, утончённый, n. пеня, штраф|0
+finish | кончать(-ся)|0
+fire | огонь|0
+firm | фирма, a. решительный|0
+first | сперва|0
+fish | рыба|0
+fit | соответствовать, подходить|0
+fitting-room | примерочная|0
+fix | укреплять|0
+fix up | устроить, организовать|0
+fjord | фьорд|0
+flat | квартира, прокол в шине|0
+floor | пол, этаж|0
+fog | туман|0
+foggy | туманный|0
+food | еда|0
+foolish | глупый|0
+foot | стопа|0
+foot-pump | ножный насос|0
+foreign | нездешний, иностранный|0
+forget | забыть|0
+forgive | прощать|0
+form | форм, бланк|0
+formal | формальный|0
+fortnight | две недели|0
+foyer | фойе|0
+free | свободный|0
+freeze | замерзать|0
+freeze up | застыть, закоченеть|0
+French | французский, n. французский язык|0
+friend | приятель|0
+front | передняя сторона|0
+in front of | перед|0
+frontier | граница|0
+full | полный|0
+fun | шутка, забава, веселье|0
+make fun of somebody | высмеивать кого-либо|0
+funny | смешной, забавный|0
+furious | взбешённый|0
+furnish | обставить|0
+furniture | мебель, обстановка|0
+further | дальше|0
+fuss | суетиться, волноваться|0
+gadget | приспособление|0
+gallon | галлон|0
+game | игра|0
+garage | гараж|0
+garden | сад|0
+gas-stove | газовая печка|0
+gate | ворота, калитка|0
+geography | география|0
+German | немецкий, n. немец, немецкий язык|0
+get | доставать, добывать|0
+get back | вернуться|0
+get hold of sthg. | суметь охватить|0
+get in touch with | связаться с кем-либо|0
+get lost | потеряться|0
+get married | жениться, выйти замуж|0
+get on with sthg. | делать успехи|0
+get on (well) with somebody | быть в хороших отношениях с кем-либо|0
+get out | выходить|0
+get ready | приготавливаться|0
+get rid of sthg. | избавиться от чего-либо|0
+get worse | ухудшаться|0
+girl | девочка|0
+give | давать|0
+give a lift | подвезти|0
+give a hand with sthg. | помогать в чем-либо|0
+give up | оставить, отказаться|0
+glad | довольный|0
+glance | | просмотреть что-либо|0
+glorious | великолепный, чудесный|0
+glove | перчатка|0
+go | идти, ехать, отправляться куда-нибудь|0
+go away | выезжать|0
+good | хороший, adv. хорошо|0
+Good heavens! | боже мой!|0
+Good Lord! | О, боже!|0
+good-bye | до свидания!|0
+goodness | о боже|0
+for goodness’sake | ради бога|0
+thank goodness | слава богу|0
+gorgeous | великолепный, замечательный|0
+grammar | грамматика|0
+grant | стипендия|0
+grapes |pl. виноград|0
+grass | трава|0
+great | великий, замечательный|0
+green | зелёный|0
+grill | печь на медленном огне|0
+ground | участок земли|0
+group | группа|0
+grow | расти|0
+grumble | ворчать|0
+guess | угадывать|0
+guide | проводник, гид|0
+guild | цех, гильдия, союз|0
+guinea | гинея|0
+gun | пистолет, револьвер|0
+half | половина|0
+half an hour | полчаса|0
+half a crown | полкроны (2 шиллинга и 6 пенсов)|0
+half-timbered | комментарий к сц. 18|0
+hall | зал|0
+hallo | алло! здорово!|0
+hammer | молоток v. забивать (молотком)|0
+hand | рука|0
+give a hand with sthg. | помочь в чём-либо|0
+on the other hand | с другой стороны|0
+handy | искусный|0
+hang | вешать, висеть|0
+happen | случаться|0
+happy | счастливый|0
+hard | твердый, трудный|0
+save hard | очень экономить|0
+work hard | много работать|0
+hat | шляпа|0
+hate | ненавидеть|0
+headmaster | директор школы|0
+hear | слышать|0
+heart | сердце|0
+heater | огреватель|0
+heavenly | небесный, божественный|0
+heavens |pl. небеса|0
+Good Heavens! | Боже мой!|0
+heavy | тяжёлый|0
+hectic | возбуждённый, лихорадочный|0
+hedge | живая изгородь|0
+height | высота|0
+help | помогать|0
+help with sthg. | помогать в чём-либо|0
+I can't help it | я ничего не могу поделать|0
+here | здесь|0
+herring | сельдь|0
+hesitate | колебаться|0
+hidden |Pple. от hide|0
+hide | прятать(-ся)|0
+high | высокий|0
+hit | ударить|0
+hobby-horse | „конёк”|0
+hold | держать|0
+holiday | праздник, отпуск, каникулы|0
+home | дом|0
+at home | дома|0
+home | домой|0
+honeymoon | медовый месяц|0
+hope | надежда|0
+hopeful | надеющийся, многообещающий|0
+horrible | ужасный|0
+hot | горячий|0
+hour | час|0
+house | дом|0
+house keeping | домашнее хозяйство|0
+housing estate | поселок|0
+human | человеческий|0
+human being | человек|0
+humour | юмор|0
+hurry | спешить|0
+hurry up! | пошевеливайся!|0
+hurry | поспешность|0
+hurt | повредить, причинить боль|0
+husband | муж|0
+idea | мысль, идея|0
+identity | идентичность, подлинность|0
+ill | больной|0
+illegal | нелегальный|0
+imagine | воображать|0
+impatient | нетерпеливый|0
+important | важный|0
+improve | улучшаться|0
+incapable | неспособный|0
+income | доход|0
+increase | возрастание, увеличение|0
+incredible | невероятный|0
+indiscreet | нескромный, несдержанный|0
+indoors | внутри дома, в помещении|0
+industry | промышленность|0
+inside | внутри, внутрь|0
+insist | настаивать|0
+inspector | инспектор, офицер полиции|0
+install | устанавливать, монтировать|0
+installation | установка, проводка|0
+instance | | в выражении:|0
+for instance | например|0
+instead | вместо, взамен|0
+institute | институт|0
+intend | намереваться|0
+interested in sthg. | заинтересованный в чем-либо|0
+interesting | интересный|0
+international | международный|0
+interrupt | прерывать, мешать|0
+interview | интервью|0
+introduce | вводить, представлять|0
+invaluable | бесценный|0
+investigate | исследовать, расследовать|0
+invite | приглашать|0
+irritable | раздражительный|0
+Italian | итальянский|0
+item | пункт (повестки дня) предмет (в списке)|0
+jack | домкрат|0
+job | работа|0
+join | присоединяться|0
+joy | радость|0
+juicy | сочный|0
+July | июль|0
+jump | прыгать|0
+just | только, как раз, именно|0
+juvenile | юный, юношеский|0
+keep | держать|0
+keep in mind | помнить|0
+keep on doing sthg. | продолжать (делать что-либо)|0
+keep somebody waiting | заставить кого-либо ждать|0
+kettle | чайник|0
+key | ключ|0
+kind | род, a. добрый|0
+king | король|0
+kiosk | киоск|0
+kit | в выражении:|0
+first-aid kit | аптечка первой помощи|0
+kitchen | кухня|0
+kitten | котёнок|0
+knock down | сбить, опрокинуть|0
+know | знать|0
+lady | дама, госпожа|0
+lake | озеро|0
+lamb | ягнёнок|0
+language | язык|0
+lantern-slides |pl. диапозитив|0
+larder | кладовая|0
+large | большой|0
+last | последний, прошлый|0
+at last | наконец|0
+late | поздний, adv. поздно|0
+lately | за последнее время|0
+latest | самый поздний, самый последний|0
+laundry | прачечная|0
+lavatory | уборная|0
+lazy | ленивый|0
+lead | вести, n. поводок|0
+leaflet | брошюрка|0
+leak | течь|0
+lean out | высовываться|0
+lean against sthg. | опираться, облокотиться|0
+learn | учиться|0
+least | самый маленький|0
+at least | по крайней мере|0
+leave | оставить, выезжать, n. отпуск|0
+lecture | лекция|0
+leg | нога|0
+lemon | лимон|0
+less | меньше|0
+let | позволять, впустить, сдавать|0
+let me know | сообщи мне, дай мне знать|0
+let have | дать|0
+let down | подводить|0
+letter | письмо|0
+library | библиотека|0
+lick | лизать|0
+lie | лежать|0
+life | жизнь|0
+light | светлый, v. зажигать, закурить, n. свет|0
+like | любить|0
+I should like | я хотел бы|0
+likely | правдоподобно|0
+lily | лилия|0
+line | линия|0
+lines |pl. роль (актёра)|0
+linguist | лингвист, языковед|0
+listen | слушать|0
+little | мало|0
+a little | немного|0
+live | жить|0
+lively | оживлённый|0
+load | груз|0
+loan | заём|0
+lobster | омар|0
+local | местный|0
+lock | закрывать на ключ|0
+locksmith | слесарь|0
+lodger | квартирант|0
+London | Лондон|0
+long | длинный, adv. долго|0
+long for sthg. | тосковать за чем-либо|0
+look | смотреть, выглядывать|0
+look after somebody | присматривать за, заботиться|0
+look for sthg. | искать что-либо|0
+look forward to sthg. | ожидать, предвкушать|0
+look here! | послушай-ка!|0
+look out! | осторожнее! берегись!|0
+look round | оглядываться|0
+have a look at sthg. | просматривать|0
+look | вид|0
+Lord | бог|0
+Oh Lord! | О боже!|0
+lose | потерять|0
+lot | в выражении:|0
+a lot | много|0
+loud | громкий, adv. громко|0
+loudspeaker | громкоговоритель|0
+love | любить|0
+lovely | восхитительный|0
+luck | счастье, удача|0
+lucky | удачливый, счастливый|0
+lukewarm | тепловатый|0
+lunch | ленч, второй завтрак|0
+madam | мадам|0
+main | главный|0
+at the main | около главного крана, выключателя|0
+make | делать, заставлять|0
+make do with sthg. | довольствоваться чем-либо|0
+make one's way | идти куда-либо|0
+make out | понять|0
+make sure | убедиться|0
+make up one's mind | решать(ся)|0
+man | человек, мужчина|0
+manage | справляться, суметь сделать что-либо|0
+map | карта|0
+marathon | марафонский бег|0
+mark | метка, знак, оценка, v. обозначать|0
+married | женатый, замужняя|0
+marvellous | чудесный|0
+master | учитель|0
+material | материал|0
+matter | дело|0
+as a matter of fact | фактически, на самом деле|0
+matter | иметь значение, значить|0
+mattress | матрац|0
+maybe | может быть|0
+mayor | мэр|0
+meal | еда, принятие пищи|0
+mean | означать|0
+meantime | в выражении:|0
+in the meantime | тем временем|0
+measure | мерить|0
+meat | мясо|0
+medicine | лекарство|0
+meet | встречать|0
+meeting | собрание|0
+melodrama | мелодрама|0
+menace | угроза, опасность|0
+mend | починять|0
+mention | упоминать|0
+menu | меню|0
+methodical | систематический, методичный, методический|0
+miaow | мяукать|0
+middle | середина|0
+mile | миля|0
+milk | молоко|0
+milkman | продавец молока|0
+millionaire | миллионер|0
+mince | рубить|0
+mind | считать; иметь что-либо против|0
+never mind | ничего, не беспокойтесь|0
+if you don't mind | если ты не возражаешь|0
+mind | разум|0
+keep in mind | помнить|0
+make up one's mind | решать(ся)|0
+mine | шахта|0
+coal-mine | угольная шахта|0
+minimum | минимум|0
+ministry | министерство|0
+minute | минута|0
+just a minute | минутку|0
+miracle | чудо|0
+miss | пропустить, выпустить|0
+miss the train | опоздать на поезд|0
+Miss | мисс (перед фамилией)|0
+mistake | ошибка|0
+mistaken | ошибочный|0
+you're mistaken | вы ошибаетесь|0
+moment | момент, мгновение|0
+any moment now | каждую минуту|0
+Monday | понедельник|0
+money | деньги|0
+month | месяц|0
+monument | памятник|0
+ancient monument | памятник старины|0
+moon | луна|0
+more | больше|0
+morning | утро|0
+good morning | доброе утро|0
+mortgage | закладная|0
+Moscow | Москва|0
+most | больше всего, n. большинство|0
+mother | мать|0
+motoring | автомобильный спорт|0
+mountain | гора|0
+move | двигать(-ся), передвигаться|0
+move in | поселяться|0
+Mrs. | миссис (перед фамилией)|0
+much | много|0
+murder | убийство|0
+museum | музей|0
+mushroom | гриб|0
+music | музыка|0
+mutter | бормотать|0
+nail | гвоздь|0
+name | имя, фамилия|0
+nappy | пелёнка|0
+national | национальный|0
+natural | естественный|0
+nearly | почти|0
+necessary | необходимый|0
+necessity | необходимость|0
+need | нуждаться|0
+neglect | пренебрегать, не заботиться|0
+neighbour | сосед|0
+nerve | нерв|0
+nervous | нервный|0
+never | никогда|0
+new | новый|0
+news | новости|0
+newspaper | газета|0
+next | следующий, ближайший|0
+next door | рядом, ближайший|0
+nice | хороший, приятный, милый|0
+night | ночь|0
+noise | шум|0
+noisy | шумный|0
+nonsense | ерунда, чепуха, бессмыслица|0
+no one | никто|0
+normal | нормальный|0
+Norwegian | норвежский|0
+note | банкнот, записка|0
+a pound note | фунтовый банкнот|0
+notebook | записная книжка|0
+nothing | ничего|0
+notice | заметить, n. надпись, предупреждение|0
+at short notice | тотчас же|0
+a month's notice | предупреждение (об увольнении) за месячный срок|0
+take notice of somebody | обращать на кого-либо внимание|0
+novel | роман|0
+now | сейчас|0
+nowadays | в настоящее время|0
+nuisance | досада, неприятность|0
+number | номер, число|0
+nursery | детская комната, рассадник, питомник|0
+nylon | нейлон|0
+object | предмет|0
+objection | возражение|0
+have objection | возражать|0
+obvious | явный|0
+occasion | случай, возможность|0
+occupant | квартирант|0
+o'clock |время на часах|0
+odd | нечётный, странный|0
+odd jobs | мелкие починки|0
+off-season | вне сезона|0
+offer | предлагать|0
+office | бюро, учреждение|0
+officer | офицер, участковый|0
+old | старый|0
+old-fashioned | старомодный|0
+omelet | омлет|0
+once | один раз|0
+at once | тотчас, сразу|0
+only | только|0
+open | открывать, a. открытый|0
+open-air theatre | театр на открытом воздухе|0
+opening | открытие, премьера|0
+opportunity | удобный случай|0
+orange | апельсин|0
+orangeade | ситро|0
+ordeal | тяжелое испытание|0
+order | заказать, приказать, n. заказ, приказ|0
+ordinary | обыкновенный|0
+other | иной|0
+the other | тот второй|0
+out | снаружи|0
+outfitter's | галантерейный магазин|0
+outside | снаружи|0
+overcrowded | переполненный|0
+overload | перегрузить|0
+owe | быть должным|0
+own | иметь, владеть|0
+own up | признаться|0
+pace | скорость, темп|0
+pack | завернуть|0
+packet | пачка, коробка|0
+painting | картина, живопись|0
+pair | пара (людей, вещей)|0
+palace | дворец|0
+paper | бумага|0
+paprika | красный перец|0
+parcel | пакет|0
+parents | pl. родители|0
+Paris | Париж|0
+park | парк|0
+part | часть, роль (актёра)|0
+part from | расставаться|0
+particular | особенный|0
+party | партия, группа людей; вечеринка|0
+pass | проходить, проезжать (мимо), передавать, придвигать|0
+passenger | пассажир|0
+passport | паспорт|0
+pastry | кондитерские изделия|0
+pavement | тротуар|0
+pay | платить|0
+pay off | выплачивать|0
+pay | оплата|0
+peace | мир, спокойствие|0
+peg | колышек|0
+pence | pl. пенсы|0
+people | pl. люди|0
+perfectly | идеально, замечательно|0
+perform | исполнять, представлять|0
+perhaps | может быть|0
+Persian | персидский|0
+personal | личный|0
+persuade | убеждать, уговоривать|0
+philosophical | философский|0
+pick | собирать|0
+pick up | заезжать за, научиться|0
+picnic | пикник, маёвка|0
+picture | картина|0
+to the pictures | в кино|0
+piece | кусочек, часть|0
+pig-breeding | разведение свиней|0
+pillow | подушка|0
+pillow-case | наволочка|0
+pilot | пилот|0
+pipe | труба|0
+pity | жалеть, сострадать|0
+it's a pity | жаль|0
+place | место|0
+plan | план|0
+plant | растение, v. посадить|0
+platform | перрон|0
+play | пьеса|0
+playground | площадка для игр|0
+pleasant | приятный|0
+please | удовлетворить|0
+please! | пожалуйста!|0
+pleasure | удовольствие|0
+plenty | изобилие, adv. много|0
+plot | фабула (книги или пьесы)|0
+plumber | водопроводчик|0
+pocket | карман|0
+point | пункт|0
+poison | отравить|0
+Poland | Польша|0
+police | полиция|0
+police constable | констебль|0
+police sergeant | сержант полиции|0
+police station | полицейский участок|0
+polish | полировать, шлифовать|0
+Polish | польский, n. польский язык|0
+polite | вежливый|0
+poor | бедный|0
+pop | „забежать” к кому-либо в гости|0
+popular | популярный|0
+pork | свинина|0
+portable | портативный, переносный|0
+position | позиция|0
+possible | возможный|0
+possibly | может быть|0
+potato | картофель|0
+potter | мастерить|0
+pound | фунт|0
+powder | порошок|0
+practical | практичный|0
+prefer | предпочитать|0
+prepare | приготавливать (ся)|0
+prepared | готов|0
+present | подарок|0
+president | президент, председатель|0
+press | пресса|0
+pretty | хорошенький, adv. довольно|0
+prevent | не допускать|0
+price | цена|0
+prime minister | премьер-министр|0
+probably | правдоподобно|0
+problem | проблема|0
+proceed | отправляться, дальше, продолжать (говорить)|0
+production | постановка, продукция|0
+professional | профессиональный|0
+progress | прогресс, успехи в учебе|0
+promise | обещать, n. обещание|0
+proper | правильный|0
+properly | как следует, должным образом|0
+proposal | предложение|0
+props | pl. реквизит, бутафория|0
+prospects |) n. pl. перспектива на что-либо|0
+prove | доказать, оказаться|0
+pub | пивная |0
+pudding | пуддинг |0
+pullover | пуловер|0
+pump | накачивать|0
+pump up | накачать|0
+puncture | прокол|0
+purple | пурпурный|0
+push | толкать|0
+push through | протолкнуть|0
+put | класть|0
+put away | прятать|0
+put down (receiver) | положить (телефонную трубку)|0
+put in (a plant) | посадить|0
+put on | одеть|0
+put the kettle on | поставить чайник|0
+put together | сложить вместе|0
+quality | качество|0
+queer | странный|0
+question | вопрос, v. спрашивать|0
+out of the question | не может быть и речи|0
+queue | очередь|0
+quick | быстрый|0
+quick-drying | быстро сохнущий|0
+quiet | спокойный|0
+quite | совершенно|0
+quiz | вид радиопрограммы или телепрограммы|0
+radiator | радиатор, батарея (отопления)|0
+radical | радикальный, основной|0
+radio | радио|0
+rain | дождь|0
+it rains | идёт дождь|0
+rancid | прогорклый|0
+rate | в выражении:|0
+at any rate | во всяком случае|0
+rather | довольно, пожалуй|0
+razor | бритва, лезвие|0
+read | читать|0
+ready | готовый|0
+real | реальный, действительный|0
+realize | понимать, отдавать себе отчет|0
+really | в самом деле|0
+reason | повод|0
+rebuilding | восстановление|0
+receiver | телефонная трубка, радиоприёмник|0
+recognize | узнавать, распознавать|0
+record | рекорд; пластинка (патефонная)|0
+record player | проигрыватель|0
+reduced | сниженный|0
+reduced to sthg. | вынужденный|0
+reduction | снижение|0
+refrain | воздержаться|0
+refuse | отказывать(-ся)|0
+registration | регистрация|0
+rehearsal | репетиция|0
+relatives |pl. родственники|0
+relax | отдыхать, делать передышку|0
+remarkable | удивительный, замечательный|0
+remember | помнить|0
+repair | починять n. починка|0
+report | отчёт, табель успеваемости, v. представлять отчёт, явиться|0
+reporter | репортёр|0
+research | исследование|0
+reservation | резервирование|0
+resignation | отказ, покорность|0
+resist | противиться, воздержаться|0
+rest | отдых, остаток, v. отдыхать|0
+restful | спокойный, успокаивающий|0
+restaurant | ресторан|0
+review | рецензировать, пересматривать|0
+revolver | револьвер|0
+reward | награда|0
+rhododendron | рододендрон|0
+rich | богатый|0
+ride | ехать (на коне, на велосипеде, или мотороллере)|0
+ride | поездка, прогулка (на велосипеде)|0
+ridiculous | смехотворный, нелепый|0
+right | правый, правильный|0
+right-hand window | окно с правой стороны|0
+that's right | именно так|0
+all right | хорошо, в порядке|0
+right | просто, точно, совершенно|0
+right away | немедленно|0
+right in front | как раз перед|0
+right now | сейчас же|0
+ring | звонить|0
+ring up | позволить кому-либо|0
+ripe | созревший, зрелый|0
+river | река|0
+road | дорога|0
+roast | печь|0
+roast beef | ростбиф|0
+Rome | Рим|0
+roof | крыша|0
+room | комната, место|0
+root | корень|0
+rose | роза|0
+rotten | гнилой, испорченный|0
+I'm feeling rotten | плохо, отвратительно себя чувствую|0
+row | скандал|0
+rubber | резина|0
+run | бежать|0
+run into somebody | случайно кого-либо встретить|0
+passport has run out | срок действия паспорта истёк|0
+beer has run out | пиво вытекло|0
+runny butter | растопившееся масло|0
+Russia | Россия|0
+Russian | русский, n. русский язык|0
+rusty | ржавый|0
+rut | привычка, что-либо привычное|0
+sad | печальный|0
+safe | безопасный|0
+sake | в выражении:|0
+for his sake | ради него|0
+salary | жалованье|0
+salesman | продавец|0
+saleswoman | продавщица|0
+same | тот самый|0
+all the same | всё таки|0
+Saturday | суббота|0
+sauce | соус|0
+save | откладывать, экономить|0
+say | сказать|0
+I say | послушай-ка|0
+says | | говорит, рассказывает|0
+scene | сцена|0
+scenery | декорации|0
+scheme | схема, проект|0
+school | школа|0
+schoolmaster | учитель|0
+science | точные науки, наука (точная)|0
+scooter | мотороллер|0
+scrambled eggs | яичница|0
+scratch | царапать(-ся)|0
+scream | кричать, n. крик|0
+screw-driver | отвертка|0
+seat | место|0
+take a seat | сесть|0
+second | второй, n. секунда|0
+a split second | доля секунды|0
+second-hand | подержанный|0
+secretary | секретарша|0
+see | видеть, увидеть, убедиться, увидеться с кем-либо|0
+seem | казаться|0
+self-service | самообслуживание|0
+sell | продавать|0
+send | высылать|0
+sense | рассудок|0
+sense of humour | чувство юмора|0
+sensible | рассудительный|0
+sensitive | чувствительный|0
+sent |T. и Pa.Pple. от send|0
+sentinel | часовой|0
+separate | отдельный|0
+separate | отделять|0
+sergeant | сержант|0
+serious | серьёзный|0
+servant | слуга|0
+set | положить, поставить|0
+set a trap | поставить капкан|0
+settle | устроить|0
+settle one's debts | заплатить долги|0
+several | и pron. несколько|0
+shake | трясти|0
+share | делить|0
+shave | брить(-ся)|0
+have a shave | побриться|0
+shed | сарайчик, будка|0
+sheet | простыня|0
+shelf | полка|0
+sherry | херес|0
+shift | передвинуть|0
+shilling | шиллинг|0
+shirt | рубашка|0
+shock | шок, толчок|0
+shocking | ужасный, возмутительный|0
+shop | магазин, v. делать покупки|0
+do shopping | делать покупки|0
+short | короткий|0
+shorthand | стенография|0
+shout | кричать|0
+show | показывать, n. показ|0
+show round | показывать (город, музей)|0
+good show! | браво!|0
+shrink | садиться (о материале)|0
+side | сторона|0
+sideboard | буфет|0
+sightseeing | осмотр достопримечательностей|0
+sign | подписывать(-ся), n. знак, примета|0
+silly | глупый, неумный|0
+simply | просто|0
+single | одинокий, один|0
+sir | сэр|0
+sit | сидеть|0
+sit down | садиться|0
+sitting-room | салон|0
+site | участок|0
+camping-site | место, где можно разбить лагерь|0
+sixpence | шесть пенсов, монета достоинства в 6 пенсов|0
+size | размер|0
+sketch | скетч|0
+skirt | юбка|0
+slaughter | резня, кровопролитие|0
+sleep | спать|0
+sleepy | спящий|0
+slight | незначительный, слабый|0
+slipper | комнатная туфля|0
+small | маленький|0
+smell | пахнуть, n. запах|0
+smoke | курить, n. дым|0
+smoky | дымный|0
+snack | легкая закуска|0
+society | общество, объединение|0
+sock | носок|0
+soil | почва|0
+solution | решение, разрешение вопроса|0
+someone | кто-то|0
+something | что-то|0
+somewhere | где-то, куда-то|0
+soon | скоро|0
+as soon as | как только|0
+soothe | успокаивать|0
+sorry | в выражении:|0
+I'm sorry | извините|0
+sort | род, сорт|0
+sound | звук, v. звучать|0
+souvenir | сувенир|0
+Soviet Union | Советский Союз|0
+spaghetti | итальянские макароны|0
+spare | запасной|0
+speak | говорить|0
+special | специальный|0
+speech | речь|0
+speed | скорость|0
+spend | тратить (время, деньги)|0
+spill | разливать, рассыпать|0
+spirit | спирт|0
+spirit cooker | печка, горящая на спирте|0
+spiritualism | спиритуализм|0
+spiritualist | спиритуалист|0
+spit | вертел|0
+splendid | чудесный|0
+spoil | портить|0
+spoon | ложка|0
+spoonful | полная ложка|0
+spring | скакать|0
+spring a leak | дать течь|0
+square | площадь|0
+stage | сцена|0
+stand | стоять|0
+start | начинать, n. начало|0
+starve | голодать|0
+state | государство, состояние|0
+statement | утверждение, заявление|0
+station | станция|0
+statue | статуя|0
+stay | оставаться задерживаться|0
+steak | бифштекс|0
+steamer | пароход|0
+stew | тушить, n. тушёное мясо|0
+stick | приклеивать, прилегать|0
+stick to sthg. | держаться чего-либо|0
+stiff | натянутый, чопорный|0
+still | всё ещё|0
+stimulant | возбуждающее средство|0
+stone | камень|0
+stop | остановить(ся)|0
+stop up | заткнуть|0
+store | склад, магазин|0
+straggly | нерегулярный, растрёпанный|0
+straight | прямой, adv. прямо|0
+strange | странный, чужой|0
+stranger | чужой|0
+streak | полоска, жилка|0
+stream | поток, ручей|0
+street | улица|0
+strength | сила|0
+stroll | прогулка|0
+strong | сильный|0
+student | студент|0
+study | учиться|0
+stuff | материал, вещи, v. надевать|0
+stupid | глупый|0
+sub-committee | подкомитет|0
+subject | предмет|0
+suburb | пригород|0
+success | успех|0
+such | такой|0
+sudden | неожиданный|0
+sue | преследовать судебным порядком|0
+suggest | предлагать|0
+suit | годиться, подходить|0
+suitable | подходящий|0
+suitcase | чемодан|0
+summer | лето|0
+sun | солнце|0
+Sunday | воскресенье|0
+sunshine | солнечный свет|0
+supper | ужин|0
+support | поддержка|0
+supporter | сторонник, приверженец|0
+suppose | предполагать|0
+suppose we saved | если бы мы экономили|0
+sure | верный, надежный|0
+make sure | убедиться|0
+surprise | удивлять, сделать сюрприз, n. сюрприз, неожиданность|0
+surroundings |pl. окрестности, среда, окружение|0
+surveyor | землемер, топограф|0
+suspicious | подозрительный|0
+swan | лебедь|0
+sweater | свитр|0
+sweet | сладкий|0
+swim | плавать|0
+table | стол|0
+take | брать, взять|0
+take care of sthg. | заботиться о чем-либо|0
+take out | вынимать|0
+take over | принимать|0
+take on | предпринимать|0
+take to pieces | разбирать по частям|0
+take up shorthand | заняться стенографией|0
+take a seat | занять место|0
+talk | говорить, разговаривать|0
+talk sthg. over | обсудить|0
+tame | ручной, прирученный|0
+tan | загар|0
+tank | бак|0
+tap | кран|0
+tape-recorder | магнитофон|0
+tape-recording | записывать на магнитофон|0
+taxi | такси|0
+tea | чай, полдник|0
+teach | учить|0
+teacher | учитель|0
+technology | технология, техника|0
+telephone | телефон|0
+over the telephone | по телефону|0
+telescope | телескоп|0
+televise | транслировать по телевизору|0
+television | телевидение|0
+television-set | телевизор|0
+tell | рассказывать, говорить|0
+temporary | временный|0
+tender | нежный, мягкий|0
+tent | палатка|0
+term | четверть (в школе)|0
+terrible | ужасный, страшный|0
+terrify | ужасать|0
+testimonial | аттестат, свидетельство|0
+thank | благодарный|0
+thanks! | спасибо!|0
+theatre | театр|0
+then | adv, тогда, потом, затем|0
+there | там|0
+over there | вон, там|0
+thing | вещь|0
+think | думать|0
+thing sthg. over | продумать|0
+thrill | вызывать нервную дрожь|0
+thriller | сенсационный роман, фильм|0
+throw | бросать|0
+thrown |Pple. от throw|0
+ticket | билет|0
+tide | прилив|0
+tide over | преодолеть|0
+tie | завязать|0
+time | время, раз|0
+high time | давно пора|0
+in no time | моментально|0
+on time | во время|0
+this time | в этот раз|0
+time-table | расписание, движения, расписание занятий|0
+tin | консервная банка|0
+tire | утомлять(ся)|0
+tired | усталый|0
+title | титул|0
+toast | гренка|0
+today | сегодня|0
+together | вместе|0
+tomate | помидор|0
+tomorrow | завтра|0
+tonight | сегодня вечером|0
+too | также, слишком|0
+tool | инструмент|0
+tool-shed | сарайчик с инструментами|0
+toothbrush | зубная щётка|0
+top | верхний, самый высокий|0
+touch | дотрагиваться, n. прикосновение|0
+get in touch | связаться|0
+tough | твердый|0
+tour | турне|0
+tourist | турист|0
+towel | полотенце|0
+Trade Union | профсоюз|0
+traffic | уличное движение|0
+train | поезд|0
+transit visa | транзитная виза|0
+translation | перевод|0
+trap | капкан|0
+set a trap | поставить капкан|0
+travel | путешествовать, n. путешествие|0
+traveller | путешественник|0
+treat | обходиться|0
+have a treat | довольствоваться наслаждаться|0
+tree | дерево|0
+tremendous | огромный, ужасный|0
+trial | проба|0
+trip | экскурсия|0
+triplicate | в выражении|0
+in triplicate | в трех экземплярах|0
+trouble | тревога, забота, хлопоты|0
+trousers | pl. брюки|0
+trust | доверять|0
+truth | правда|0
+try | пробовать, пытаться|0
+try on | примерить|0
+turn | поворачиваться|0
+turn back | повернуть назад|0
+turn into | превращать во что-либо|0
+turn off | закрыть (кран), выключить (свет)|0
+turn out | исключить, выпускать (изделия)|0
+turn up | внезапно появляться|0
+turn | в выражении:|0
+it's our turn | наша очередь|0
+TV | телевидение|0
+twice | дважды|0
+type | писать на машинке|0
+typical | типичный|0
+typing | писание на машинке|0
+tyre | шина|0
+ugly | безобразный|0
+umbrella | зонтик|0
+uncle | дядя|0
+underground | метрополитен|0
+understand | понимать|0
+understudy | дублёр (в театре)|0
+unfair | неправильный, несправедливый|0
+ungrateful | неблагодарный|0
+union | союз|0
+unload | разгружать|0
+unpack | распаковывать|0
+unpaid | бесплатный|0
+unpleasant | неприятный|0
+unspoilt | неиспорченный|0
+unusual | необыкновенный|0
+up | вверх|0
+upset | опрокидывать, дезорганизовать|0
+upset oneself | нервничать|0
+upstairs | наверху|0
+use | употреблять|0
+useful | полезный|0
+usual | обыкновенный|0
+valuable | ценный|0
+value | ценность|0
+variety | разнообразие, множество|0
+vase | ваза|0
+very | очень|0
+Victorian | викторианский |0
+view | вид|0
+village | деревня|0
+visa | виза|0
+visit | визит, v. навещать|0
+visitor | гость|0
+vote | голосовать, n. голосование|0
+waist | талия|0
+wait | ждать|0
+waitress | официантка|0
+wake | будить|0
+walk | ходить, прогуливаться|0
+walking tour | экскурсия пешком|0
+wall | стена, барьер|0
+wallet | бумажник|0
+wall-paper | обои|0
+want | желать|0
+war | война|0
+warm | тёплый, adv. тепло|0
+Warsaw | Варшава|0
+wash | мыть, стирать|0
+wash off | смывать|0
+wash up | мыть посуду|0
+washing powder | стиральный порошок|0
+watch | наблюдать, следить|0
+water | вода|0
+water-repellent | водонепроницаемый|0
+wave | волноваться (о море)|0
+wave one's arm | махать руками|0
+way | путь, способ|0
+be in the way | мешать|0
+by the way | между прочим|0
+get one's way | добиться своего|0
+on the way | по дороге|0
+this way | туда|0
+wear | носить (одежду и т.п.)|0
+weather | погода|0
+week | неделя|0
+welcome | приветствовать|0
+well | хорошо|0
+as well | также|0
+west | западный|0
+wheat | пшеница|0
+wheel | колесо|0
+while | момент|0
+for a while | на некоторое время|0
+white | белый|0
+whole | целый|0
+wife | жена|0
+wild | дикий|0
+wild boar | кабан|0
+wind | ветер|0
+window | окно|0
+winter | зима|0
+wish | хотеть, желать|0
+witness | свидетель|0
+woman | женщина|0
+women | pl. женщины|0
+wonder | задумываться, желать знать|0
+wonderful | замечательный|0
+wood | лес|0
+woody | лесной|0
+woolen | шерстяной|0
+word | слово|0
+work | работать, n. работа|0
+worry | беспокоиться, n. тревога|0
+worse | худший|0
+worth | стоящий|0
+wrap up | кутаться|0
+write | писать|0
+wrong | неправильный, ошибочный|0
+wrote |T. от write|0
+yard | ярд |0
+year | год|0
+yellow | желтый|0
+yesterday | вчера|0
+yet | ещё нет, уже|0
+Yorkshire | графство Йорк|0
+young | молодой|0
+youngster | молодой человек|0
+zebra | зебра|0

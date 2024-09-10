@@ -110,4 +110,3 @@ fun handleUpdate(
         tbs.sendMessage(botToken, chatId, "Прогресс сброшен")
     }
 }
-
