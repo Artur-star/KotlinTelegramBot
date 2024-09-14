@@ -50,6 +50,7 @@ fun main(args: Array<String>) {
     }
 
     val tbs = TelegramBotService(json)
+    val variantsAnswer: List<String> = listOf("AAA", "BBB", "CCC", "DDD")
 
     while (true) {
         Thread.sleep(2000)
@@ -59,7 +60,7 @@ fun main(args: Array<String>) {
         val response: Response = json.decodeFromString(responseString)
         if (response.result.isEmpty()) continue
         val sortedUpdates = response.result.sortedBy { it.updateId }
-        sortedUpdates.forEach { handleUpdate(it, json, botToken, trainers, tbs) }
+        sortedUpdates.forEach { handleUpdate(it, json, botToken, trainers, tbs, variantsAnswer) }
         lastUpdateId = sortedUpdates.last().updateId + 1
     }
 }
@@ -69,7 +70,8 @@ fun handleUpdate(
     json: Json,
     botToken: String,
     trainers: HashMap<Long, LearnWordsTrainer>,
-    tbs: TelegramBotService
+    tbs: TelegramBotService,
+    variantsAnswer: List<String>,
 ) {
     val text = firstUpdate.message?.text
     val chatId = firstUpdate.message?.chat?.id ?: firstUpdate.callbackQuery?.message?.chat?.id ?: return
@@ -77,7 +79,7 @@ fun handleUpdate(
 
     val trainer = trainers.getOrPut(chatId) { LearnWordsTrainer("$chatId.txt") }
 
-        if (text?.lowercase() == TEXT_START) {
+    if (text?.lowercase() == TEXT_START) {
         tbs.sendMenu(json, botToken, chatId)
     }
 
@@ -86,7 +88,7 @@ fun handleUpdate(
     }
 
     if (data.lowercase() == CLICKED_LEARN_WORDS) {
-        tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+        tbs.checkNextQuestionAndSend(trainer, botToken, chatId, variantsAnswer)
     }
 
     if (data.startsWith(CALLBACK_DATA_ANSWER_PREFIX, true)) {
@@ -100,7 +102,7 @@ fun handleUpdate(
                 "${trainer.question?.correctAnswer?.original} - ${trainer.question?.correctAnswer?.translate}"
             )
         }
-        tbs.checkNextQuestionAndSend(trainer, botToken, chatId)
+        tbs.checkNextQuestionAndSend(trainer, botToken, chatId, variantsAnswer)
     } else if (text?.lowercase() == TEXT_HELLO) {
         tbs.sendMessage(botToken, chatId, TEXT_HELLO)
     }

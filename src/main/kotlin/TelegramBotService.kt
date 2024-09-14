@@ -49,15 +49,17 @@ class TelegramBotService(private val json: Json) {
         return response.body()
     }
 
-    private fun sendQuestion(botToken: String, chatId: Long, question: Question): String {
+    private fun sendQuestion(botToken: String, chatId: Long, question: Question, variantAnswer: List<String>): String {
         val urlSendMessage = "$TELEGRAM_BASE_URL/bot$botToken/sendMessage"
 
         val requestBody = SendMessageRequest(
             chatId = chatId,
-            text = question.correctAnswer.original,
+            text = "${question.correctAnswer.original}\n" +
+                    question.variants.mapIndexed { index, word -> "\n${variantAnswer[index]} - ${word.translate}" }
+                        .joinToString(),
             replyMarkup = ReplyMarkup(
-                listOf(question.variants.mapIndexed { index, word ->
-                    InlineKeyboard(text = word.translate, callbackData = "$CALLBACK_DATA_ANSWER_PREFIX$index")
+                listOf(List(question.variants.size) { index ->
+                    InlineKeyboard(text = variantAnswer[index], callbackData = "$CALLBACK_DATA_ANSWER_PREFIX$index")
                 })
             )
         )
@@ -121,10 +123,15 @@ class TelegramBotService(private val json: Json) {
         return response.body()
     }
 
-    fun checkNextQuestionAndSend(trainer: LearnWordsTrainer, botToken: String, chatId: Long) {
+    fun checkNextQuestionAndSend(
+        trainer: LearnWordsTrainer,
+        botToken: String,
+        chatId: Long,
+        variantAnswer: List<String>
+    ) {
         val question = trainer.getNextQuestion()
         if (question == null) {
             sendMessage(botToken, chatId, "Вы выучили все слова в базе")
-        } else sendQuestion(botToken, chatId, question)
+        } else sendQuestion(botToken, chatId, question, variantAnswer)
     }
 }
