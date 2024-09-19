@@ -83,8 +83,8 @@ class LearnWordsTrainer(
 
         fileName.forEachLine { line ->
             val parts = line.split("|")
-            val original = parts[0]
-            val translate = parts[1]
+            val original = parts[0].trim()
+            val translate = parts[1].trim()
             val correctAnswersCount = parts.getOrNull(2)?.toIntOrNull() ?: 0
 
             val word = Word(original, translate, correctAnswersCount)
